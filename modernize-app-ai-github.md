@@ -18,7 +18,7 @@ Login to your VM with the following credentials...
 
 **Password**: +++@lab.VirtualMachine(BuildBaseVM).Password+++
 
-Welcome to the Modernize apps and data with generative AI using GitHub and Azure Lab! In this lab, you will perform an assessment on three .NET applications, migrate two of the applications to Azure App Service, perform code scan using Azure Migrate application and code assessment for .NET, use GitHub Copilot chat for autocomplete-style suggestions and experiment with a few of the modernization features available in App Service. Please follow the steps below to get started on your journey.
+ to the Modernize apps and data with generative AI using GitHub and Azure Lab! In this lab, you will perform an assessment on three .NET applications, migrate two of the applications to Azure App Service, perform code scan using Azure Migrate application and code assessment for .NET, use GitHub Copilot chat for autocomplete-style suggestions and experiment with a few of the modernization features available in App Service. Please follow the steps below to get started on your journey.
 
 ## Explore the applications
 
