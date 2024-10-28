@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourcePrefix": {
-            "value": "ignite24" 
+            "value": "prel20" 
         },
         "administratorLoginPassword": {
             "value": "1234ABcd!" 
