@@ -170,6 +170,7 @@ module storageAccount 'br/public:avm/res/storage/storage-account:0.8.2' = {
   params: {
     name: '${resourcePrefix}${uniqueString(resourceGroup().id)}'
     allowBlobPublicAccess: true
+    publicNetworkAccess: 'Enabled'
     location: location
     skuName: 'Standard_LRS'
     kind: 'StorageV2'
