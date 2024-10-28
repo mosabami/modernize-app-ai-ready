@@ -112,16 +112,35 @@ module vault 'br/public:avm/res/key-vault/vault:0.4.0' = {
   }
 }
 
-module cogservices 'br/public:avm/res/cognitive-services/account:0.8.0' = {
-  name: '${resourcePrefix}${uniqueString(resourceGroup().id)}aiservices'
+// module cogservices 'br/public:avm/res/cognitive-services/account:0.8.0' = {
+//   name: '${resourcePrefix}${uniqueString(resourceGroup().id)}aiservices'
+//   params: {
+//     // Required parameters
+//     kind: 'AIServices'
+//     name: '${resourcePrefix}${uniqueString(resourceGroup().id)}aiservices'
+//     location: location
+//     publicNetworkAccess: 'Enabled'
+//   }
+// }
+module searchService 'br/public:avm/res/search/search-service:0.7.2' = {
+  name: '${resourcePrefix}${uniqueString(resourceGroup().id)}search'
   params: {
     // Required parameters
-    kind: 'AIServices'
-    name: '${resourcePrefix}${uniqueString(resourceGroup().id)}aiservices'
-    location: location
-    publicNetworkAccess: 'Enabled'
+    name: '${resourcePrefix}${uniqueString(resourceGroup().id)}search'
+    // Non-required parameters
+    location: 'eastus'
+    authOptions: {
+      aadOrApiKey: {
+        aadAuthFailureMode: 'http403'
+      }
+    }
+    disableLocalAuth: false
+    managedIdentities: {
+      systemAssigned: true
+    }
   }
 }
+
 
 module openaiservice 'br/public:avm/res/cognitive-services/account:0.8.0' = {
   name: '${resourcePrefix}${uniqueString(resourceGroup().id)}openai'
