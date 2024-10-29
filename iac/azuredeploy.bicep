@@ -9,7 +9,7 @@ param sqlDBName string = 'pycontosohotel'
 param location string = resourceGroup().location
 
 @description('The administrator username of the SQL logical server.')
-param administratorLogin string = 'postgres'
+param administratorLogin string = 'contosoadmin'
 
 @description('The administrator password of the SQL logical server.')
 @secure()
