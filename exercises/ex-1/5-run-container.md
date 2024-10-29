@@ -54,8 +54,7 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
     
     ![ixlyml4r.png](../../media/ixlyml4r.png)
     
-   {: .warning }
-   > You may minimize Visual Studio Code but don’t close the Visual Studio Code Terminal window at this time.
+   > ⚠️ You may minimize Visual Studio Code but don’t close the Visual Studio Code Terminal window at this time.
 
 1. Open a web browser and go to **http://localhost:8002/setup**. The **Contoso Hotel Setup** page displays.
 
@@ -63,8 +62,7 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
 
 1. On the **Contoso Hotel Setup** page, select **Setup database**. This launches a script that creates the database schema and populates the tables with data.
 
-   {: .note }
-   > The page updates when the script completes.
+   > 📓 The page updates when the script completes.
 
     ![yfke4jk3.png](../../media/yfke4jk3.png) 
 
@@ -89,8 +87,7 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
     | Adults   | **2**|
     | Rooms   | **1**|
 
-   {: .warning }
-   > The **Visitor** field doesn't search properly. Type in the letter 'a' into the field and select a name from the dropdown list.
+   > ⚠️ The **Visitor** field doesn't search properly. Type in the letter 'a' into the field and select a name from the dropdown list.
 
     ![izps11yx.jpg](../../media/izps11yx.jpg)
 
