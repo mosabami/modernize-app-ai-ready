@@ -1,11 +1,4 @@
----
-title: '5. Run the containerized app and add a booking'
-layout: default
-nav_order: 5
-parent: 'Exercise 02: Deploy and review the legacy Contoso Hotel app'
----
-
-# Task 05 - Run the containerized app and add a booking
+# Run the containerized app and add a booking
 
 <!--- Estimated time: 5 minutes---> 
 
