@@ -87,6 +87,7 @@ resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2024-06-
       ipRules: []
     }
     publicNetworkAccess: 'Enabled'
+    disableLocalAuth: false
   }
 }
 
@@ -112,16 +113,6 @@ module vault 'br/public:avm/res/key-vault/vault:0.4.0' = {
   }
 }
 
-// module cogservices 'br/public:avm/res/cognitive-services/account:0.8.0' = {
-//   name: '${resourcePrefix}${uniqueString(resourceGroup().id)}aiservices'
-//   params: {
-//     // Required parameters
-//     kind: 'AIServices'
-//     name: '${resourcePrefix}${uniqueString(resourceGroup().id)}aiservices'
-//     location: location
-//     publicNetworkAccess: 'Enabled'
-//   }
-// }
 module searchService 'br/public:avm/res/search/search-service:0.7.2' = {
   name: '${resourcePrefix}${uniqueString(resourceGroup().id)}search'
   params: {
@@ -154,7 +145,8 @@ module openaiservice 'br/public:avm/res/cognitive-services/account:0.8.0' = {
       defaultAction: 'Allow'
       virtualNetworkRules: []
       ipRules: []
-    }
+    } 
+    disableLocalAuth: false
     deployments: [
       {
         model: {
