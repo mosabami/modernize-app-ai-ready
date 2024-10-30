@@ -100,7 +100,7 @@ module searchService 'br/public:avm/res/search/search-service:0.7.2' = {
     // Required parameters
     name: '${resourcePrefix}${uniqueString(resourceGroup().id)}search'
     // Non-required parameters
-    location: 'eastus'
+    location: location
     authOptions: {
       aadOrApiKey: {
         aadAuthFailureMode: 'http403'
