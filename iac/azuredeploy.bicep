@@ -71,25 +71,6 @@ resource pgsqlDB 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2023-12-01
 
 output connectionString string = 'host=${pgsqlServer.properties.fullyQualifiedDomainName};port=5432;database=${sqlDBName};user=${administratorLogin};password=${administratorLoginPassword};'
 
-resource cognitiveServicesAccount 'Microsoft.CognitiveServices/accounts@2024-06-01-preview' = {
-  name: '${resourcePrefix}${uniqueString(resourceGroup().id)}aiserv'
-  location: location
-  sku: {
-    name: 'S0'
-  }
-  kind: 'OpenAI'
-  properties: {
-    apiProperties: {}
-    customSubDomainName: '${resourcePrefix}${uniqueString(resourceGroup().id)}'
-    networkAcls: {
-      defaultAction: 'Allow'
-      virtualNetworkRules: []
-      ipRules: []
-    }
-    publicNetworkAccess: 'Enabled'
-    disableLocalAuth: false
-  }
-}
 
 module registry 'br/public:avm/res/container-registry/registry:0.1.1' = {
   name: '${resourcePrefix}${uniqueString(resourceGroup().id)}acr'
@@ -188,13 +169,6 @@ module storageAccount 'br/public:avm/res/storage/storage-account:0.8.2' = {
   }
 }
 
-// resource brochuresContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-08-01' = {
-//   name: '${storageAccount.name}/default/brochures'
-//   properties: {
-//     publicAccess: 'Blob'
-//   }
-// }
-
 
 
 module managedEnvironment 'br/public:avm/res/app/managed-environment:0.8.0' = {
@@ -202,7 +176,7 @@ module managedEnvironment 'br/public:avm/res/app/managed-environment:0.8.0' = {
   params: {
     // Required parameters
     logAnalyticsWorkspaceResourceId: laws.id
-    name: 'amemin001'
+    name: '${resourcePrefix}${uniqueString(resourceGroup().id)}acaenv'
     internal: false
     location:  location
     zoneRedundant: false
@@ -222,5 +196,16 @@ resource laws 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
     features: {
       enableLogAccessUsingOnlyResourcePermissions: false
     }
+  }
+}
+
+module component 'br/public:avm/res/insights/component:0.4.1' = {
+  name: '${resourcePrefix}${uniqueString(resourceGroup().id)}appin'
+  params: {
+    // Required parameters
+    name: '${resourcePrefix}${uniqueString(resourceGroup().id)}appin'
+    workspaceResourceId: laws.id
+    // Non-required parameters
+    location: location
   }
 }
