@@ -29,7 +29,7 @@ The key steps are as follows:
 1. You should find a resource group called "ContosoHotel". Clicking on it will reveal the resources required for this lab already provisioned for you.
 1. Find your **Azure Container Registry** resource and set its name as an environment variable using the command below.
     ```powershell
-    $ACR_NAME = <your ACR name>
+    $ACR_NAME = "<your ACR name>"
     ```
 
 1. Enter the following command at the Terminal window prompt and then select **Enter** to log into Azure. 
