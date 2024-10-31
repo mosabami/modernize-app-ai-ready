@@ -92,7 +92,6 @@ The key steps are as follows:
 
     ![yhdwim2f.png](../../media/yhdwim2f.png)
 
-   {: .note }
-   > It may take 2-3 minutes to build the container.
+   > 📓 It may take 2-3 minutes to build the container.
 
 1. Leave Visual Studio Code open. You’ll use the tool in the next task.
