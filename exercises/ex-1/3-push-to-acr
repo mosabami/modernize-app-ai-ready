@@ -53,7 +53,9 @@ The key steps are as follows:
 1. When a message displays stating that you’ve logged into Microsoft Azure, close the web page and return to Visual Studio Code.
 
     ![3hf4vlmd.png](../../media/3hf4vlmd.png)
-   > :warning: You may see an error message stating the Azure could not connect to the registry login server. This error usually indicates that even though the container registry instance is provisioned, there’s still some configuration happening. Wait a few minutes and run the command again.
+
+    > :warning: You may see an error message stating the Azure could not connect to the registry login server. This error usually indicates that even though the container registry instance is provisioned, there’s still some configuration happening. Wait a few minutes and run the command again.
+
 1. Enter the following command at the Terminal window prompt and then select **Enter**. This command creates a Docker tag for the app.
 
     ```powershell

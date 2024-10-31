@@ -43,7 +43,7 @@ In this task, you’ll review the **Azure Database for PostgreSQL - Flexible Ser
     ```
 
     You will notice that there are presently no tables available. Tables and data will be added programatically in later exercises.You can run this command again afterwards to see the difference.
-1. Set the postgresfqdn environment variable in your powershell terminal
+1. Set the postgresfqdn environment variable in your PowerShell terminal
 
     ```powershell
     $env:PGHOST = "< the Postgres servername you recorded above similar to this format: ignite24apokoay3pdhckpg.postgres.database.azure.com>" 
