@@ -1,8 +1,7 @@
-# Run the containerized app and add a booking
-
-<!--- Estimated time: 5 minutes---> 
+# Task 05 -  Run the containerized app and add a booking
 
 ## Introduction
+
 You created a Docker container and pushed the container to ACR in previous tasks. Now, you’ll run the container and view the app in a browser. Since this is the first time you are running the app, you’ll need to run a process to create the database schema and populate the tables with data.
 
 Now, you can view the various pages for the app and try out the features.
@@ -44,10 +43,10 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
     ```
     docker run -p 8002:8000 -e POSTGRES_CONNECTION_STRING=$env:connectionString pycontosohotel:v1.0.0
     ```
-    
+
     ![ixlyml4r.png](../../media/ixlyml4r.png)
-    
-   > ⚠️ You may minimize Visual Studio Code but don’t close the Visual Studio Code Terminal window at this time.
+
+    > ⚠️ You may minimize Visual Studio Code but don’t close the Visual Studio Code Terminal window at this time.
 
 1. Open a web browser and go to **http://localhost:8002/setup**. The **Contoso Hotel Setup** page displays.
 
@@ -55,9 +54,9 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
 
 1. On the **Contoso Hotel Setup** page, select **Setup database**. This launches a script that creates the database schema and populates the tables with data.
 
-   > 📓 The page updates when the script completes.
+    > 📓 The page updates when the script completes.
 
-    ![yfke4jk3.png](../../media/yfke4jk3.png) 
+    ![yfke4jk3.png](../../media/yfke4jk3.png)
 
 1. On the **Contoso Hotel Setup** page, select **Home**. The **Home** page for the app displays.
 
@@ -80,7 +79,7 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
     | Adults   | **2**|
     | Rooms   | **1**|
 
-   > ⚠️ The **Visitor** field doesn't search properly. Type in the letter 'a' into the field and select a name from the dropdown list.
+    > ⚠️ The **Visitor** field doesn't search properly. Type in the letter 'a' into the field and select a name from the dropdown list.
 
     ![izps11yx.jpg](../../media/izps11yx.jpg)
 

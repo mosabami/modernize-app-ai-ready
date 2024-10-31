@@ -31,7 +31,9 @@ In this task, you’ll review the **Azure Database for PostgreSQL - Flexible Ser
     ![sdsa42232.png](../../media/sdsa42232.png)
 1. Click on the Databases panel under Settings in the left navigation pane sdsddssd32
 1. Click on the **Connect** button next to the pycontosohotel database and click **Yes** to the popup
-       > :warning: For security reasons, you would not want to click Yes for your dev or production workloads at work. This is done purely for demo purposes.
+
+    > :warning: For security reasons, you would not want to click Yes for your dev or production workloads at work. This is done purely for demo purposes.
+
 1. After the deployment completes the change to your policy, click on the Connect button again until your terminal looks like is shown in the picture below
     ![sdsddssd32.png](../../media/sdsddssd32.png)
 1. Enter the password `1234ABcd!` in the field provided and hit enter
