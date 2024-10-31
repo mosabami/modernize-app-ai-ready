@@ -20,12 +20,12 @@ The key steps are as follows:
 ## Steps
 1. Open **Docker Desktop**. Wait for the app to start. After the app starts, wait for the app to start Docker Engine.
 
-    ![x2zpfcur.png](../../media/x2zpfcur.png)
+   ![x2zpfcur.png](../../media/x2zpfcur.png)
 
 
    > :warning: After Docker Engine starts, the Docker UI should resemble the following screenshot. Docker will display any running containers.
 
-    ![3vhwsgbg.png](../../media/3vhwsgbg.png)
+   ![3vhwsgbg.png](../../media/3vhwsgbg.png)
 
 1. Minimize Docker Desktop but don’t close the app.
 
