@@ -34,8 +34,11 @@ In this task, you’ll refactor the front-end **views.py** file in the **Updated
 1. Select **views.py**. The file displays in the right side of the Visual Studio Code window.
 
 1. Delete all code between the following region markers in the code (at or around lines 9 - 304):
-    #region -------- BACKEND API ENDPOINTS --------
-    #endregion -------- BACKEND API ENDPOINTS --------
+
+    ```
+    ####region -------- BACKEND API ENDPOINTS --------
+    ####endregion -------- BACKEND API ENDPOINTS --------
+    ```
 
     ![qhkyv58o.png](../../media/qhkyv58o.png)
 
@@ -88,8 +91,10 @@ In this task, you’ll refactor the front-end **views.py** file in the **Updated
 1. Select **views.py**. The file displays in the right side of the Visual Studio Code window.
 
 1. Delete all code between the following region markers in the code (around lines 309 - 332):
+    ```
     #region -------- FRONTEND API ENDPOINTS --------
     #endregion -------- FRONTEND API ENDPOINTS --------
+    ```
 
     ![zo0ce49i.png](../../media/zo0ce49i.png)
 
