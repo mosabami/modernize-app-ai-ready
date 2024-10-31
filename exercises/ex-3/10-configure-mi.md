@@ -1,4 +1,4 @@
-# Configure managed identities for deployed Azure resources
+# Task 10 - Configure managed identities for deployed Azure resources
 
 ## Introduction
 

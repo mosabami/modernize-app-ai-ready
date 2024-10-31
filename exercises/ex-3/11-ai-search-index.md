@@ -1,4 +1,4 @@
-# Configure Azure AI Search to extract data from the brochures and test the search index
+# Task 11 - Configure Azure AI Search to extract data from the brochures and test the search index
 
 ## Introduction
 
@@ -38,8 +38,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
     | Storage acccount   | Use the name for the storage account that you created in Exercise 04, Task 01, Step 11  |
     | Blob container   | **brochures**| 
 
-   {: .warning }
-   > The data import wizard will fail at this step if you haven’t uploaded any brochures to the storage container.
+    > :warning: The data import wizard will fail at this step if you haven’t uploaded any brochures to the storage container.
 
     ![p7r3flis.png](../../media/p7r3flis.png)
 
@@ -66,13 +65,13 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
     ![dblr2z51.png](../../media/dblr2z51.png)
 
-   > :warning: Make sure you set the Objects name prefix to 'brocures-vector' or you might have to take extra configuration steps later. It should take only a few minutes for the Import and vectorize data tool to index the data from the 40 hotel brochures.
+    > :warning: Make sure you set the Objects name prefix to 'brocures-vector' or you might have to take extra configuration steps later. It should take only a few minutes for the Import and vectorize data tool to index the data from the 40 hotel brochures.
 
 1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexers**.
 
     ![0aurkfrp.png](../../media/0aurkfrp.png)
 
-   > :warning: The Status for the indexer should be *Succeeded*. If the Status indicates that indexing is still in progress, wait a few minutes and refresh the page. If the Status shows as *Failed*, select the indexer to review error messages and then notify your coach.
+     > :warning: The Status for the indexer should be *Succeeded*. If the Status indicates that indexing is still in progress, wait a few minutes and refresh the page. If the Status shows as *Failed*, select the indexer to review error messages and then notify your coach.
 
 1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexes** and then select the index.
 
