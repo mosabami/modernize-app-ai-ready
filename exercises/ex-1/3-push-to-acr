@@ -34,45 +34,39 @@ The key steps are as follows:
 
 1. Enter the following command at the Terminal window prompt and then select **Enter** to log into Azure. 
 
-    ```
+    ```powershell
     az login
     ```
 1. This should pop up a browser requiring you to enter your credentials. Enter the same Azure credentials used in the portal login step above. On successful login, switch back to your PowerShell terminal which should look like the picture below.
 
     ![x8ary55x.jpg](../../media/x8ary55x.jpg)
 
-   > :warning: Record the ACR name. You’ll need to supply the ACR name again later in the lab.
+    > :warning: Record the ACR name. You’ll need to supply the ACR name again later in the lab.
 
 1. Enter the following command at the Terminal window prompt and then select **Enter**. This command signs you in to the ACR instance.
 
-    ```
+    ```powershell
     az acr login --name "$ACR_NAME"
     ```
 
     ![266ttbar.png](../../media/266ttbar.png)
-
 1. When a message displays stating that you’ve logged into Microsoft Azure, close the web page and return to Visual Studio Code.
 
     ![3hf4vlmd.png](../../media/3hf4vlmd.png)
-
-   {: .warning }
    > :warning: You may see an error message stating the Azure could not connect to the registry login server. This error usually indicates that even though the container registry instance is provisioned, there’s still some configuration happening. Wait a few minutes and run the command again.
-
 1. Enter the following command at the Terminal window prompt and then select **Enter**. This command creates a Docker tag for the app.
 
-    ```
+    ```powershell
     docker tag "pycontosohotel:v1.0.0" "$ACR_NAME.azurecr.io/pycontosohotel:v1.0.0"
     ```
 
 1. Enter the following command at the Terminal window prompt and then select **Enter**. This command pushes the app container to ACR.
 
-    ```
+    ```powershell
     docker push "$ACR_NAME.azurecr.io/pycontosohotel:v1.0.0"
     ```
 
     ![6kejtvu5.png](../../media/6kejtvu5.png)
 
-   {: .note }
-   > It may take 1-2 minutes to push the app container to ACR.
-
+    > 📓 It may take 1-2 minutes to push the app container to ACR.
 1. Leave Visual Studio Code open. You’ll use the tool in the next task.
