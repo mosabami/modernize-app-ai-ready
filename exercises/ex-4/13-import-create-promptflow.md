@@ -1,4 +1,4 @@
-# Import and configure a flow
+# Task 13 - Import and configure a flow
 
 <!--- Estimated time: 40 minutes---> 
 
@@ -10,8 +10,7 @@ The flow collects inputs and performs several steps. The diagram below depicts t
 
 ![n9s08385.png](../../media/n9s08385.png)
 
-
-> :note: AI Studio also includes an integrated vector search feature. We didn’t specify the use of the integrated vector search feature for this lab because we can’t deploy a flow that uses the feature to a container at this time.
+> 📓 AI Studio also includes an integrated vector search feature. We didn’t specify the use of the integrated vector search feature for this lab because we can’t deploy a flow that uses the feature to a container at this time.
 
 ## Description
 
@@ -28,7 +27,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
 1. Return to the Azure AI Studio browser window. 
 
-   > :note: If you closed the window, go to [**Azure AI Studio**](ai.azure.com).
+    > 📓 If you closed the window, go to [**Azure AI Studio**](ai.azure.com).
 
 1. In the left navigation pane for the hub, select **Hub Overview**.
 
@@ -50,7 +49,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
 1. On the **Upload from local** page, select **Zip file** and then select **Browse**. Go to the **Downloads\AssetsRepo\Assets** folder.
 
-   > :note: You created this folder in a previous exercise when you cloned the GitHub repository to acquire the hotel brochures at [TechExcel-Modernize-applications-to-be-AI-ready](https://github.com/microsoft/TechExcel-Modernize-applications-to-be-AI-ready).
+    > 📓 You created this folder in a previous exercise when you cloned the GitHub repository to acquire the hotel brochures at [TechExcel-Modernize-applications-to-be-AI-ready](https://github.com/microsoft/TechExcel-Modernize-applications-to-be-AI-ready).
 
 1. Select **chatflow-oai-datasources..zip** and then select **Open**. 
 
@@ -58,7 +57,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
     ![sm7xeytn.jpg](../../media/sm7xeytn.jpg)
 
-   > :warning: It may take several minutes to upload the flow. Separately, if you receive the following error or the **Upload** button becomes available again, wait a few minutes and try again.
+     > :warning: It may take several minutes to upload the flow. Separately, if you receive the following error or the **Upload** button becomes available again, wait a few minutes and try again.
 
     ![i90n1xi1.jpg](../../media/i90n1xi1.jpg)
 
@@ -154,7 +153,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
     1. Change the value to **10K**.
     1. Select **Save and close**.
 
-   > :warning: Dragging the slider does not allow for small increments. Select the **white dot** on the slider, then use **Left/Right Arrow Keys** to change the value.
+     > :warning: Dragging the slider does not allow for small increments. Select the **white dot** on the slider, then use **Left/Right Arrow Keys** to change the value.
 
     ![abwb2txg.jpg](../../media/abwb2txg.jpg)
 

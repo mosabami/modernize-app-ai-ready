@@ -1,4 +1,4 @@
-# Deploy the flow to Azure Container apps and test the app
+# Task 15 -  Deploy the flow to Azure Container apps and test the app
 
 ## Description
 
@@ -17,7 +17,7 @@ In this task you’ll prepare the flow for deployment and deploy the flow. You�
     $ACR_NAME="contosoacr745457"
     ```
 
-   > :note: If you no longer have it noted down, you can find it again from the **ContosoHotel** Resource Group.
+     > 📓 If you no longer have it noted down, you can find it again from the **ContosoHotel** Resource Group.
 
     ![ydqt4iqz.jpg](../../media/ydqt4iqz.jpg)
 
@@ -42,7 +42,7 @@ In this task you’ll prepare the flow for deployment and deploy the flow. You�
     Remove-Item -Recurse -Force ./docker-dist
     ```
 
-   > :note: Prompt flow creates the connection yaml files in the connections folder based on the pf connection command. Ensure that just three connections are defined and the names are azure_openai, azure_ai_search, and postgresql.
+     > 📓 Prompt flow creates the connection yaml files in the connections folder based on the pf connection command. Ensure that just three connections are defined and the names are azure_openai, azure_ai_search, and postgresql.
 
     ![t6qhp8kq.jpg](../../media/t6qhp8kq.jpg)
 

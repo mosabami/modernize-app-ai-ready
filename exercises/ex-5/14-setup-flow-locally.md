@@ -1,4 +1,4 @@
-# Set up Visual Studio Code and run the flow locally
+# Task 14 - Set up Visual Studio Code and run the flow locally
 
 ## Description
 
@@ -47,11 +47,11 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
     PGPASSWORD="1234ABcd!"
     ```
 
-   > :note: To locate the values for AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY, in the Azure portal, select the Azure OpenAI resource you created. In the **Resource Management** section, select **Keys and Endpoints**. Use the Endpoint URL for AZURE_OPENAI_ENDPOINT and the key 1 value for AZURE_OPENAI_API_KEY.
+    > 📓 To locate the values for AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY, in the Azure portal, select the Azure OpenAI resource you created. In the **Resource Management** section, select **Keys and Endpoints**. Use the Endpoint URL for AZURE_OPENAI_ENDPOINT and the key 1 value for AZURE_OPENAI_API_KEY.
 
-   > :note: To locate the values for AZURE_AI_SEARCH_ENDPOINT, AZURE_AI_SEARCH_INDEX, and AZURE_AI_SEARCH_API_KEY, in the Azure portal, select the Search Service instance you created.  On the Overview page, use the URL for AZURE_AI_SEARCH_ENDPOINT. In the left hand navigation pane, in the **Search Management** section, select **Indexes**. Use the index name for AZURE_AI_SEARCH_INDEX. In the left navigation pane, in the **Settings** section, select **Keys**. Use Primary admin key for AZURE_AI_SEARCH_API_KEY.
+    > 📓 To locate the values for AZURE_AI_SEARCH_ENDPOINT, AZURE_AI_SEARCH_INDEX, and AZURE_AI_SEARCH_API_KEY, in the Azure portal, select the Search Service instance you created.  On the Overview page, use the URL for AZURE_AI_SEARCH_ENDPOINT. In the left hand navigation pane, in the **Search Management** section, select **Indexes**. Use the index name for AZURE_AI_SEARCH_INDEX. In the left navigation pane, in the **Settings** section, select **Keys**. Use Primary admin key for AZURE_AI_SEARCH_API_KEY.
     
-   > :note: For all parameters that start with "PG", use the values from the PostgreSQL connection string that you recorded earlier in the lab.
+    > 📓 For all parameters that start with "PG", use the values from the PostgreSQL connection string that you recorded earlier in the lab.
 
 1. Save your changes to the **.env** file.
 
@@ -99,7 +99,7 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
     pf flow test --flow . --interactive
     ```
 
-   > :note: Try **Where can I ski?** and then **How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?**
+     > 📓 Try **Where can I ski?** and then **How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?**
 
     ![rlb45r1n.jpg](../../media/rlb45r1n.jpg)
 
