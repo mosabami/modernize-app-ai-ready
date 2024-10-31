@@ -36,6 +36,6 @@ Make sure your terminal is PowerShell. If it isn't, click on the button next to 
 
 1. Modify the value of the following variable to reflect the path to the **Downloads** folder on your computer. Enter the command at the Visual Studio Code Terminal window prompt and select **Enter** to set your **Downloads** folder path as a variable.
 
-    ```
+    ```powershell
     $PATH_TO_DOWNLOADS_FOLDER = "C:\Users\Admin\Downloads"
     ```
