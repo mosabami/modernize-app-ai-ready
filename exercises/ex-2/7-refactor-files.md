@@ -1,6 +1,4 @@
-# Task 02 - Refactor files
-
-<!--- Estimated time: 15 minutes---> 
+# Task 07 - Refactor files
 
 ## Introduction
 
@@ -10,9 +8,9 @@ The *views.py* file defines app routes, endpoints, and views. The file is divide
 - Back-end API endpoints
 - Front-end API endpoints
 
-The **Dockerfile** file defines the Docker image to use and provides instructions for copying app components to the Docker container when you build the container. 
+The **Dockerfile** file defines the Docker image to use and provides instructions for copying app components to the Docker container when you build the container.
 
-The **requirements.txt** file specifies the packages that the app requires to run. 
+The **requirements.txt** file specifies the packages that the app requires to run.
 
 ## Description
 
@@ -36,11 +34,8 @@ In this task, you’ll refactor the front-end **views.py** file in the **Updated
 1. Select **views.py**. The file displays in the right side of the Visual Studio Code window.
 
 1. Delete all code between the following region markers in the code (at or around lines 9 - 304):
-
-    ```
     #region -------- BACKEND API ENDPOINTS --------
-    #endregion -------- BACKEND API ENDPOINTS -------- 
-    ```  
+    #endregion -------- BACKEND API ENDPOINTS --------
 
     ![qhkyv58o.png](../../media/qhkyv58o.png)
 
@@ -52,7 +47,7 @@ In this task, you’ll refactor the front-end **views.py** file in the **Updated
 
     ![1pqgxt9o.png](../../media/1pqgxt9o.png)
 
-   > :warning: Don’t forget to delete the comma after **dblayer**.
+    > :warning: Don’t forget to delete the comma after **dblayer**.
 
 1. Locate the code that checks to see if the database is set up (at or around lines 22-26):
 
@@ -93,14 +88,10 @@ In this task, you’ll refactor the front-end **views.py** file in the **Updated
 1. Select **views.py**. The file displays in the right side of the Visual Studio Code window.
 
 1. Delete all code between the following region markers in the code (around lines 309 - 332):
-
-    ```
     #region -------- FRONTEND API ENDPOINTS --------
-    #endregion -------- FRONTEND API ENDPOINTS -------- 
-    ```  
+    #endregion -------- FRONTEND API ENDPOINTS --------
 
     ![zo0ce49i.png](../../media/zo0ce49i.png)
 
 1. Save and close the file.
-
 1. Leave Visual Studio Code open. You’ll run additional commands in the next task.

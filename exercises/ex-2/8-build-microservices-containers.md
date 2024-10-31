@@ -1,6 +1,4 @@
-# Task 03 - Build the containers for front-end and back-end components and push the containers to Azure
-
-<!--- Estimated time: 20 minutes---> 
+# Task 08 - Build the containers for front-end and back-end components and push the containers to Azure
 
 ## Introduction
 

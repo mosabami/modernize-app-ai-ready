@@ -1,6 +1,4 @@
-# Task 01 - Separate front-end components from back-end components
-
-<!--- Estimated time: 15 minutes---> 
+# Task 06 - Separate front-end components from back-end components
 
 ## Introduction
 
@@ -17,7 +15,6 @@ The key steps are as follows:
 1. Create a folder named **UpdatedApp** with subfolders **FrontEnd** and **Backend**.
 1. Copy all front-end files to the **FrontEnd** folder and all back-end files to the **Backend** folder.
 
-
 ## Learning Resources
 
 - [**Decompose a monolithic application**](https://learn.microsoft.com/en-us/training/modules/microservices-architecture/ )
@@ -33,7 +30,7 @@ The key steps are as follows:
 
 1. Update the value for the $PATH_TO_DOWNLOADS variable to point to the **Downloads** folder on your machine. Enter the following commands at the Terminal window prompt to set the variable and change directories to that folder, which contains the repository files you cloned in Exercise 01.
 
-    ```
+    ```powershell
     $PATH_TO_DOWNLOADS = "C:\Users\Admin\Downloads"
     cd $PATH_TO_DOWNLOADS
     ```
@@ -42,7 +39,7 @@ The key steps are as follows:
 
 1. Enter the following command at the Terminal window prompt. This command creates a directory for front-end components.
 
-    ```
+    ```powershell
     mkdir -p ContosoHotel/UpdatedApp/Frontend
     ```
 
@@ -50,7 +47,7 @@ The key steps are as follows:
 
 1. Enter the following command at the Terminal window prompt. This command creates a directory for back-end components.
 
-    ```
+    ```powershell
     mkdir -p ContosoHotel/UpdatedApp/Backend 
     ```
 
@@ -62,7 +59,7 @@ The key steps are as follows:
 
 1. Enter the following commands at the Terminal window prompt. These commands copy all necessary files to the **Frontend** folder for the updated app.
 
-    ```
+    ```powershell
     cd $PATH_TO_DOWNLOADS\ContosoHotel
     cp startup.* $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend
     cp uwsgi.ini $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend
@@ -74,7 +71,7 @@ The key steps are as follows:
 
 1. Enter the following commands at the Terminal window prompt. These commands create a subfolder in the **Frontend** folder and copy all necessary files to subfolder.
 
-    ```
+    ```powershell
     cd $PATH_TO_DOWNLOADS
 
     cp -r ContosoHotel/contoso_hotel/static $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend\contoso_hotel\
@@ -86,7 +83,7 @@ The key steps are as follows:
 
 1. Enter the following commands at the Terminal window prompt. These commands copy all necessary files to the **Backend** folder for the updated app.
 
-    ```
+    ```powershell
     cd $PATH_TO_DOWNLOADS\ContosoHotel
     cp *.sql $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend
     cp startup.* $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend
@@ -99,9 +96,8 @@ The key steps are as follows:
 
 1. Enter the following commands at the Terminal window prompt. These commands create a subfolder in the **Backend** folder and copy all necessary files to subfolder.
 
-    ```
+    ```powershell
     cd $PATH_TO_DOWNLOADS\
-
     cp -r $PATH_TO_DOWNLOADS/ContosoHotel/contoso_hotel/dblayer $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend\contoso_hotel\
     cp $PATH_TO_DOWNLOADS/ContosoHotel/contoso_hotel/*.py $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend\contoso_hotel\
     ```
