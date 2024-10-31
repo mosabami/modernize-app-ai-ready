@@ -109,7 +109,7 @@ In this task you’ll build a Docker container for the updated app front-end com
     Write-Host -ForegroundColor Green  "Default Domain is: $(az containerapp env show --name "$CONTOSO_HOTEL_ENV" --resource-group "ContosoHotel" --query "properties.defaultDomain" -o tsv)"
     ```
 
-   > 📓 It may take 2-3 minutes for these commands to complete.
+    > 📓 It may take 2-3 minutes for these commands to complete.
 
     ![lmve6yr2.png](../../media/lmve6yr2.png)  
 
@@ -131,7 +131,7 @@ In this task you’ll build a Docker container for the updated app front-end com
     Write-Host -ForegroundColor Green  "Frontend URL is: $CONTOSO_FRONTEND_URL"
     ```
 
-  > 📓 Record the value for the front-end URL. You’ll use the value later in the lab.
+    > 📓 Record the value for the front-end URL. You’ll use the value later in the lab.
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com). Sign in to Azure if necessary.
 1. Search for the **ContosoHotel** resource group and select the group.
