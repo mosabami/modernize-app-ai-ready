@@ -95,7 +95,7 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
 
 1. You will see two already deployed base models there. 
 
-    > :warning: If you do not see them, create a deployment called `gpt-4o` using the model 'gpt-4o'. Create another one called `text-embedding-ada-002` using the model 'text-embedding-ada-002'.
+    > :warning: If you do not see them, create a deployment called `gpt-4o` using the model 'gpt-4o'. Create another one called 'text-embedding-ada-002' using the model 'text-embedding-ada-002'.
 
     ![7kqy0kpf.png](../../media/7kqy0kpf.png)
 

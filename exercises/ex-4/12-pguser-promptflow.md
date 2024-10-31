@@ -1,5 +1,4 @@
-
-# Create a postgresql user and set up an AI Hub and Prompt Flow
+# Task 12 - Create a postgresql user and set up an AI Hub and Prompt Flow
 
 <!--- Estimated time: 20 minutes---> 
 
@@ -71,7 +70,7 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
     ![azenz3uq.png](../../media/azenz3uq.png)
 
-   > :note: Record the name of the AI Hub. You’ll use the name later in this task.
+     > 📓 Record the name of the AI Hub. You’ll use the name later in this task.
 
 1. Open a browser window and go to **https://ai.azure.com/**.
 
@@ -108,7 +107,7 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
     ![y7yaln2q.png](../../media/y7yaln2q.png)
 
-   > :warning: As the resources are being provisioned, take a screenshot of the page that displays. You’ll need to enter the AI Hub name and the Storage account name later in this task. Otherwise, you can go to the resource group in Azure portal to see the resource names.
+     > :warning: As the resources are being provisioned, take a screenshot of the page that displays. You’ll need to enter the AI Hub name and the Storage account name later in this task. Otherwise, you can go to the resource group in Azure portal to see the resource names.
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com).
 
@@ -116,7 +115,7 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
 1. Filter the list of resources by using the **Type** column. You should see two storage accounts. The first is the storage account that you created earlier in the lab. The other was created by the AI Hub. Select this storage account.
 
-   > :note: The name for the newly created storage account will start with **st**. You can also use the screenshot you captured in Step 16 to identify the storage account name to use here.
+    > 📓 The name for the newly created storage account will start with **st**. You can also use the screenshot you captured in Step 16 to identify the storage account name to use here.
 
 1. In the left navigation pane for the storage account, select **Access Control (IAM)**.
 

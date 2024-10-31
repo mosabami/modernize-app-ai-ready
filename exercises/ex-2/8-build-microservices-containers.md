@@ -46,7 +46,7 @@ In this task you’ll build a Docker container for the updated app front-end com
     docker build -t "pycontosohotel-frontend:v1.0.0" .
     ```
 
-    > 📓 It may take 2-3 minutes to build the Docker container.
+     > 📓 It may take 2-3 minutes to build the Docker container.
 
     ![k6aogw3d.png](../../media/k6aogw3d.png)
 
@@ -70,7 +70,7 @@ In this task you’ll build a Docker container for the updated app front-end com
     docker build -t "pycontosohotel-backend:v1.0.0" .
     ```
 
-   > 📓 It may take 2-3 minutes to build the Docker container.
+     > 📓 It may take 2-3 minutes to build the Docker container.
 
 1. Enter the following commands at the Terminal window prompt. These commands tag the back-end container and push the container to ACR.
 
