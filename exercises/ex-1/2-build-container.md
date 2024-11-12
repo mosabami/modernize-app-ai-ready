@@ -57,6 +57,9 @@ The key steps are as follows:
     ![2w42g4so.png](../../media/2w42g4so.png)
 
 1. Minimize the PowerShell window. Return to Visual Studio Code.
+1. Open a new **PowerShell** terminal in Visual studio code
+
+    ![new-terminal-vscode.png](../../media/new-terminal-vscode.png)
 
 1. Modify the file path, if needed, for the following command to point to the **Downloads\ContosoHotel** folder that you created. Enter the command at the Visual Studio Code Terminal window and then select **Enter**. This command switches the context to the folder where the cloned repository resides.
 

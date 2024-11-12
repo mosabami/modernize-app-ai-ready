@@ -1,6 +1,14 @@
 # Task 01 - Clone the GitHub repository for the project to your local machine
 
-<!--- Estimated time: 3 minutes---> 
+Now that you have completed the first time of the lab, we will be moving on to the second part of the lab where you will learn how to:
+1. Decompose a monolithic app into two components (can be considered microservices but in this case we keep it simple by breaking it into frontend and backend services)
+1. Containerize the services and push the container images to the cloud
+1. Create container services in Azure container apps
+1. Build and test an AI service using Azure AI search and Prompt flow
+1. Deploy the AI service to the cloud
+1. Update your app to leverage the new AI service
+
+To begin, close everything you have open from the first part of this lab.
 
 ## Introduction
 
