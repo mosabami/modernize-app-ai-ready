@@ -18,6 +18,19 @@ Throughout this lab, we will be using PowerShell as our termina. We will begin b
 
 ## Description
 
+### Setup your account
+You will also need to setup an account for your user within the virtual machine you are using for the az login command to work properly.
+
+1. Within your virtual machine, click the **Windows** button enter the following in the search: "account settings" 
+1. Click on **Email & accounts**.
+1. Click on the **Add a work or school account** link
+1. In the Email field, enter the email provided in the Resources of the workshop and click **Next**
+1. Enter the password and click "Sign in"
+
+    > :warning: In future steps, whenever you login to Azure from your terminal using `az login` for example, chose the account you just created in the window that pops up.
+
+### Begin the workshop
+
 In this task, you’ll clone the GitHub repository to the **Downloads** folder on your local machine.
 
     > :warning: Throughout this workshop you will be advised to store certain values. You are advised to open up a **Notepad ++** instance in the virtual environment and store those values in there for easy access. Also, when you have to modify commands, you are advised to copy the command into notepad and make the edits there as it is easier to do edits in Notepad ++ than directly in the terminal.
