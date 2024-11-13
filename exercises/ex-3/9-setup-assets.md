@@ -62,11 +62,17 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
     ![8t6tp7c0.png](../../media/8t6tp7c0.png)
 
 1. In Azure Portal, find your Storage account within the **Ignite24** resource group and click on it
-1. Click on **Blob service** in the middle window of the Overview page within the **Properties** tab
+1. Click on the **Blob service** link in the middle window of the Overview page within the **Properties** tab
 1. Click on **+ Container** in the resulting page
 1. Set **Name** field to brochures
-1. Set the **Anonymous access level** to Container
+1. Set the **Anonymous access level** to **Container (anonymous read access for containers and blobs)**
 1. Click the **Create** button at the bottom
+1. Expand **Security + networking** in the left blade and click on **Networking**
+1. Under the **Firewalls and virtual networks** tab set Public network access to **Enable from all networks** (Note: Do not enable public access on your production workloads as this can lead to security issues. We are only doing this for demo purposes.)
+1. Click **Save** at the top
+
+    ![enable public access](../../media/enable-public.png)
+
 1. Enter the following command at the Terminal window prompt. This command uploads the brochures to the storage container that you created earlier in this task. You can check out the `C:\Users\Admin\Downloads\AssetsRepo\Assets\PDFs` folder to see what these PDFs look like while the files are uploaded.
 
     ```
@@ -98,7 +104,7 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
 
     ![d8iqveao.png](../../media/d8iqveao.png)
 
-1. You will see two already deployed base models there. 
+1. Verify you already have two models there.
 
     > :warning: If you do not see them, create a deployment called `gpt-4o` using the model 'gpt-4o'. Create another one called 'text-embedding-ada-002' using the model 'text-embedding-ada-002'.
 
