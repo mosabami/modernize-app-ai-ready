@@ -33,7 +33,7 @@ In this task, you’ll refactor the front-end **views.py** file in the **Updated
 
 1. Select **views.py**. The file displays in the right side of the Visual Studio Code window.
 
-1. Delete all code between the following region markers in the code (at or around lines 9 - 304):
+1. Manually delete all code between the following region markers in the code (at or around lines 9 - 304). The "T" button is not to be used for this step:
 
     ```
     ####region -------- BACKEND API ENDPOINTS --------
@@ -90,7 +90,7 @@ In this task, you’ll refactor the front-end **views.py** file in the **Updated
 
 1. Select **views.py**. The file displays in the right side of the Visual Studio Code window.
 
-1. Delete all code between the following region markers in the code (around lines 309 - 332):
+1. Manually delete all code between the following region markers in the code (around lines 309 - 332):
     ```
     #region -------- FRONTEND API ENDPOINTS --------
     #endregion -------- FRONTEND API ENDPOINTS --------

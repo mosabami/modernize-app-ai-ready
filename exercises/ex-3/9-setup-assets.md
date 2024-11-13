@@ -26,7 +26,7 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
     az login
     ```
 
-1. If $AZURE_REGION is not still set, update the value of the **AZURE_REGION_PROVIDED** variable to use the region provided for this workshop.
+1. If $AZURE_REGION is not set, update the value of the **AZURE_REGION_PROVIDED** variable to use the region provided for this workshop.
 
     ```
     $AZURE_REGION="AZURE_REGION_PROVIDED"

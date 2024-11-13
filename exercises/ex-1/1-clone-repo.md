@@ -20,6 +20,8 @@ Throughout this lab, we will be using PowerShell as our termina. We will begin b
 
 In this task, you’ll clone the GitHub repository to the **Downloads** folder on your local machine.
 
+    > :warning: Throughout this workshop you will be advised to store certain values. You are advised to open up a **Notepad ++** instance in the virtual environment and store those values in there for easy access. Also, when you have to modify commands, you are advised to copy the command into notepad and make the edits there as it is easier to do edits in Notepad ++ than directly in the terminal.
+
 1.  Open File Explorer on your computer and go to the **Downloads** folder. 
 
     ![otderjk6.png](../../media/otderjk6.png)

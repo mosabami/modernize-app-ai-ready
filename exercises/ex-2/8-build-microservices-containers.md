@@ -122,6 +122,8 @@ In this task you’ll build a Docker container for the updated app front-end com
 
     ![gj1rov77.png](../../media/gj1rov77.png)
 
+    > 📓 Record the value for the back-end URL. You’ll use the value later in the lab.
+
 1. Enter the following commands at the Terminal window prompt. These commands create the container app for the front-end app components.
 
     ```powershell
@@ -134,8 +136,8 @@ In this task you’ll build a Docker container for the updated app front-end com
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com). Sign in to Azure if necessary.
 1. Search for the **Ignite24** resource group and select the group.
-1. Locate and select the **backend** container app.
+1. Locate and select the **backend** container app. If the backend container app isn't showing, click refresh within the Azure portal resource group page and it should show up.
 1. In the left navigation pane for the container app, in the **Settings** section, select **CORS**.
 1. In the **Allowed Origins** field, enter the value for the front-end URL that you recorded in Step 12 of this task. 
-1. In the **Allowed Methods** field, enter an asterisk ( **\*** ). Select **Apply** to create the CORS policy. This will allow cross origin resource sharing from your frontend so that the requests from the frontend will be allowed to access / share resouces, in this case data from the postgres database, through the backend service which has direct access to those resources. CORS helps provide very limited resouces for browser based applications. For more information about CORS, check out [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+1. In the **Allowed Methods** Tab, within the **Allowed Methods** field, enter an asterisk ( **\*** ). Select **Apply** to create the CORS policy. This will allow cross origin resource sharing from your frontend so that the requests from the frontend will be allowed to access / share resouces, in this case data from the postgres database, through the backend service which has direct access to those resources. CORS helps provide very limited resouces for browser based applications. For more information about CORS, check out [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 1. Leave Visual Studio Code open. You’ll run additional commands in the next exercise.
