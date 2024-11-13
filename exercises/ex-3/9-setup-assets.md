@@ -61,7 +61,12 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
 
     ![8t6tp7c0.png](../../media/8t6tp7c0.png)
 
-
+1. In Azure Portal, find your Storage account within the **Ignite24** resource group and click on it
+1. Click on **Blob service** in the middle window of the Overview page within the **Properties** tab
+1. Click on **+ Container** in the resulting page
+1. Set **Name** field to brochures
+1. Set the **Anonymous access level** to Container
+1. Click the **Create** button at the bottom
 1. Enter the following command at the Terminal window prompt. This command uploads the brochures to the storage container that you created earlier in this task. You can check out the `C:\Users\Admin\Downloads\AssetsRepo\Assets\PDFs` folder to see what these PDFs look like while the files are uploaded.
 
     ```

@@ -14,7 +14,6 @@ To begin, close everything you have open from the first part of this lab.
 
 The Contoso Hotel app is monolithic. Front-end components (HTML, CSS, and JavaScript files) and back-end components (APIs) are all deployed as a single unit. The files required to deploy the legacy app are stored in a GitHub repository. 
 
-Throughout this lab, we will be using PowerShell as our termina. We will begin by opening up powershell, then cloning the required code to our Downloads folder.
 
 ## Description
 
@@ -31,11 +30,11 @@ You will also need to setup an account for your user within the virtual machine 
 
 ### Begin the workshop
 
+    > :warning: Throughout this lab, we will be using PowerShell as our terminal withi Visual Studio Code (VS Code). We will begin by opening up powershell, then cloning the required code to our Downloads folder. In addition, you will be advised to store certain values. You are advised to open up a **Notepad ++** instance in the virtual environment and store those values in there for easy access. Also, when you have to modify commands, you are advised to copy the command into notepad and make the edits there as it is easier to do edits in Notepad ++ than directly in the terminal.
+
 In this task, you’ll clone the GitHub repository to the **Downloads** folder on your local machine.
 
-    > :warning: Throughout this workshop you will be advised to store certain values. You are advised to open up a **Notepad ++** instance in the virtual environment and store those values in there for easy access. Also, when you have to modify commands, you are advised to copy the command into notepad and make the edits there as it is easier to do edits in Notepad ++ than directly in the terminal.
-
-1.  Open File Explorer on your computer and go to the **Downloads** folder. 
+1.  Open File Explorer on your computer and go to the **Downloads** folder.
 
     ![otderjk6.png](../../media/otderjk6.png)
 
