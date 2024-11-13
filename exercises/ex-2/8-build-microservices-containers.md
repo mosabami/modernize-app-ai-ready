@@ -20,7 +20,7 @@ In this task, you’ll build separate containers for front-end and back-end comp
 
 In this task you’ll build a Docker container for the updated app front-end components.
 
-1. In the list of resources, locate the Container Registry instance. Select **Terminal** from the top menu and select **New Terminal**. Update the following variable to use the name of the instance that you recorded in Exercise 02 Task 03.
+1. In the list of resources, locate the Container Registry instance and get the name (not including the .azurecr.io part). Select **Terminal** from the top menu of your VS code window from the previous step and select **New Terminal**. Update the following variable to use the name of the Azure Container Registry instance (ACR).
 
     ```
     $ACR_NAME="ACR_NAME_FROM_AZURE_PORTAL"
@@ -91,22 +91,21 @@ In this task you’ll build a Docker container for the updated app front-end com
 1. Set the environment variable for your Azure region
 
     ```
-    $AZURE_REGION="<location instructed to use>"
-    $AZURE_REGION="eastus"
+    $AZURE_REGION="<location instructed to use eg 'South Central US'. You can get this value from the Portal where you can see region ACR was deployed in>"
     ```
 
-1. Go on your Azure portal. Within the **ContosoHotel** resource group, you will see an Azure Container App Environment already provisioned for you. Set the name of that enviroment variable for use in the future
+1. Go on your Azure portal. Within the **Ignite24** resource group, you will see an Azure Container App Environment already provisioned for you. Set the name of that enviroment variable for use in the future
 
     ```powershell
-    $CONTOSO_HOTEL_ENV = "<your ACA environemtn name>"
+    $CONTOSO_HOTEL_ENV = "<your ACA environment name>"
     ```
 
 1. Enter the following commands at the Terminal window prompt. These commands will display the container app environment default domain as well as get the ACR credential required for the container app to be create.
 
     ```powershell
     $CONTOSO_ACR_CREDENTIAL = az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv
-    az containerapp env create --name "$CONTOSO_HOTEL_ENV" --resource-group "ContosoHotel" --location "$AZURE_REGION"
-    Write-Host -ForegroundColor Green  "Default Domain is: $(az containerapp env show --name "$CONTOSO_HOTEL_ENV" --resource-group "ContosoHotel" --query "properties.defaultDomain" -o tsv)"
+    az containerapp env create --name "$CONTOSO_HOTEL_ENV" --resource-group "Ignite24" --location "$AZURE_REGION"
+    Write-Host -ForegroundColor Green  "Default Domain is: $(az containerapp env show --name "$CONTOSO_HOTEL_ENV" --resource-group "Ignite24" --query "properties.defaultDomain" -o tsv)"
     ```
 
     > 📓 It may take 2-3 minutes for these commands to complete.
@@ -116,8 +115,8 @@ In this task you’ll build a Docker container for the updated app front-end com
 1. Enter the command at the Visual Studio Code Terminal window prompt and then select **Enter**. These commands create the container app for the back-end app components.
 
     ```powershell
-    az containerapp create --name "backend" --resource-group "ContosoHotel" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-backend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "POSTGRES_CONNECTION_STRING=$env:connectionString"
-    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "ContosoHotel" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    az containerapp create --name "backend" --resource-group "Ignite24" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-backend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "POSTGRES_CONNECTION_STRING=$env:connectionString"
+    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     Write-Host -ForegroundColor Green  "Backend URL is: $CONTOSO_BACKEND_URL"
     ```
 
@@ -126,15 +125,15 @@ In this task you’ll build a Docker container for the updated app front-end com
 1. Enter the following commands at the Terminal window prompt. These commands create the container app for the front-end app components.
 
     ```powershell
-    az containerapp create --name "frontend" --resource-group "ContosoHotel" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-frontend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "API_BASEURL=$CONTOSO_BACKEND_URL"
-    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "ContosoHotel" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    az containerapp create --name "frontend" --resource-group "Ignite24" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-frontend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "API_BASEURL=$CONTOSO_BACKEND_URL"
+    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     Write-Host -ForegroundColor Green  "Frontend URL is: $CONTOSO_FRONTEND_URL"
     ```
 
     > 📓 Record the value for the front-end URL. You’ll use the value later in the lab.
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com). Sign in to Azure if necessary.
-1. Search for the **ContosoHotel** resource group and select the group.
+1. Search for the **Ignite24** resource group and select the group.
 1. Locate and select the **backend** container app.
 1. In the left navigation pane for the container app, in the **Settings** section, select **CORS**.
 1. In the **Allowed Origins** field, enter the value for the front-end URL that you recorded in Step 12 of this task. 

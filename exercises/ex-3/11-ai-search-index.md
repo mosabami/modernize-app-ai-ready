@@ -19,7 +19,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com). Sign in to Azure.
 
-1. On the Azure Home page, select **Resource groups** and then select **ContosoHotel**.
+1. On the Azure Home page, select **Resource groups** and then select **Ignite24**.
 
 1. In the list of resources that displays, select the **Azure AI Search service** instance from the list of resources.
 

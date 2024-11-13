@@ -26,7 +26,7 @@ The key steps are as follows:
 1. Head over to the azure portal at `portal.azure.com` on your browser.
 1. Log in with the provided credentials:
 1. At the **Global search bar** at the top of the portal, enter "resource groups" and select it from the dropdown
-1. You should find a resource group called "ContosoHotel". Clicking on it will reveal the resources required for this lab already provisioned for you.
+1. You should find a resource group called "Ignite24". Clicking on it will reveal the resources required for this lab already provisioned for you.
 1. Find your **Azure Container Registry** resource and set its name as an environment variable using the command below.
     ```powershell
     $ACR_NAME = "<your ACR name>"

@@ -93,7 +93,7 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
     |:---------|:---------|
     | Hub name   | Use the AI Hub name that you recorded in step 8 of this task.  |
     | Subscription  | Use the subscription where you deployed all other resources.|
-    | Resource group | **ContosoHotel** |
+    | Resource group | **Ignite24** |
     | Location |Enter the location for the region where you deployed all other resources**|
     | Connect Azure AI Services or OpenAI | Select the name for the OpenAI service instance that you deployed |
 
@@ -111,7 +111,7 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com).
 
-1. In the **Search** field at the top of the home page, enter **Resource groups** and then select **ContosoHotel**.
+1. In the **Search** field at the top of the home page, enter **Resource groups** and then select **Ignite24**.
 
 1. Filter the list of resources by using the **Type** column. You should see two storage accounts. The first is the storage account that you created earlier in the lab. The other was created by the AI Hub. Select this storage account.
 

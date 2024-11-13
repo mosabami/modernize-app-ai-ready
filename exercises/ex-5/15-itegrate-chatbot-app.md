@@ -17,7 +17,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     $ACR_NAME="contosoacr745457"
     ```
 
-     > ðŸ““ If you no longer have it noted down, you can find it again from the **ContosoHotel** Resource Group.
+     > ðŸ““ If you no longer have it noted down, you can find it again from the **Ignite24** Resource Group.
 
     ![ydqt4iqz.jpg](../../media/ydqt4iqz.jpg)
 
@@ -46,7 +46,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 
     ![t6qhp8kq.jpg](../../media/t6qhp8kq.jpg)
 
-1. Configure and update the following variables based on your previous configurations and select **Enter**. **$CONTOSO_HOTEL_ENV** will be name of your **Container Apps Environment** found in the **ContosoHotel** Resource Group. The **_API_KEY**, **_ENDPOINT**, and **PGHOST** variable values can be found in the **.env file** from the last task.
+1. Configure and update the following variables based on your previous configurations and select **Enter**. **$CONTOSO_HOTEL_ENV** will be name of your **Container Apps Environment** found in the **Ignite24** Resource Group. The **_API_KEY**, **_ENDPOINT**, and **PGHOST** variable values can be found in the **.env file** from the last task.
 
     ```
     $CONTOSO_HOTEL_ENV = "contosoenv890581"
@@ -65,7 +65,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 1. Enter the following to set the variables for values we've used previously.
 
     ```
-    $RG_NAME = "ContosoHotel"
+    $RG_NAME = "Ignite24"
     $CONTOSO_ACR_CREDENTIAL = az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv
 
     $PGUSER = "promptflow"
@@ -94,7 +94,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 1. Enter the following to pull and set the **$CONTOSO_BACKEND_URL** variable for use in the next step.
 
     ```
-    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "ContosoHotel" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     ```
 
 1. Enter the following commands in the Visual Studio Code Terminal window prompt. These commands update the application front-end.
@@ -105,7 +105,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     ```
 1. Get the URL of your frontend service
     ```powershell    
-    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "ContosoHotel" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_FRONTEND_URL"
     ```
 1. Copy the frontend URL provided in the last command and paste it in a new browser tab. Click on the calendar sign if it shows. Then click on the robot icon at the bottom left corner of the resulting screen. This will slide out a chat window.

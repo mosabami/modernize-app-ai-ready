@@ -34,7 +34,7 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
 
 1. 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com). Sign in to Azure.
 
-1. On the Azure Home page, select **Resource groups** and then select **ContosoHotel**.
+1. On the Azure Home page, select **Resource groups** and then select **Ignite24**.
 
 1. In the list of resources that displays, sort the resources by the Type column. Locate the row for the Storage account that was created and record the Storage account name. You’ll need the name in an upcoming task. Set the environment variable to the name of that Storage account.
    
