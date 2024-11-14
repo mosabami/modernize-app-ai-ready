@@ -11,25 +11,6 @@ Now, you can view the various pages for the app and try out the features.
 
 In this task, you’ll run the Docker app container and then display the setup page for the app. You’ll create the database schema and populate the tables with data. You’ll review common app pages and add a booking record. Finally, you’ll search for the record you just added to verify that the record was successfully added to the database.
 
-The key steps are as follows:
-
-1. Run the Docker container on port 8000.
-1. Open the app at http://localhost:8000/setup.
-1. Run the setup process in the app to add records to the database.
-1. Review the app pages.
-1. Add the following booking record:
-
-    | Field | Value |
-    |:---------|:---------|
-    | Hotel   | **Contoso Suites Athens**  |
-    | Visitor   | **Emma Davis**|
-    | Check-in   | **12/28/2024**|
-    | Check-out   | **01/05/2025**|
-    | Adults   | **2**|
-    | Rooms   | **1**|
-
-1. Verify that the new record is saved and close the browser window.
-
 ## Learning Resources
 
 [**Manage container images in Azure Container Registry**](

@@ -37,7 +37,7 @@ The key steps are as follows:
     ```powershell
     az login
     ```
-1. This should pop up a browser requiring you to enter your credentials. Enter the same Azure credentials used in the portal login step above. On successful login, switch back to your PowerShell terminal which should look like the picture below.
+1. This should pop up a browser requiring you to enter your credentials. If you created an account in a previous step, choose that account. Otherwise choose **work and school account** and enter the credentials provided to you in the **Resources** tab of the lab instructions. If you run into any issues here, run the command "az login --use-device-code" and follow the instructions to authenticate on your browser.
 
     ![x8ary55x.jpg](../../media/x8ary55x.jpg)
 

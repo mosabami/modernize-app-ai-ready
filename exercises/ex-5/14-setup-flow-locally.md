@@ -27,25 +27,7 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
 
 1. In the Explorer pane, expand **lab-6-promptflow**.
 
-1. Right-click **.env.sample** and then select **Rename**. Rename the file to **.env**.
-
-1. Select **.env** to open the file in an Editor window.
-
-1. Update the variables to use the same values that you used in Exercise 05, Task 01, Step 05.
-
-    ```
-    AZURE_OPENAI_ENDPOINT="https://azureopenai62143490.openai.azure.com/"
-    AZURE_OPENAI_API_KEY="08c96b97791e44ea83c4dff67a76eb32"
-    AZURE_OPENAI_DEPLOYMENT_ID="gpt-4o"
-    AZURE_AI_SEARCH_ENDPOINT="https://contososrch799498.search.windows.net"
-    AZURE_AI_SEARCH_INDEX="brochures-vector"
-    AZURE_AI_SEARCH_API_KEY="ctkSfXrdBMgyYEIFOkECVmrWrdcRioV7wyAfqRVSNGAzSeAsUWls"
-    PGHOST="mg32xpzwcffkg.postgres.database.azure.com"
-    PGPORT="5432"
-    PGUSER="promptflow"
-    PGDATABASE="pycontosohotel"
-    PGPASSWORD="1234ABcd!"
-    ```
+1. Select **.env** to open the file in an Editor window. For the next step, you will need the notes below to get the correct value.
 
     > 📓 To locate the values for AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY, in the Azure portal, select the Azure OpenAI resource you created. In the **Resource Management** section, select **Keys and Endpoints**. Use the Endpoint URL for AZURE_OPENAI_ENDPOINT and the key 1 value for AZURE_OPENAI_API_KEY.
 
@@ -53,9 +35,25 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
     
     > 📓 For all parameters that start with "PG", use the values from the PostgreSQL connection string that you recorded earlier in the lab.
 
+1. Update the variables marked below you find in the **.env** file  with values you get as described in the notes above as well as parameters you used in previous steps.
+
+    AZURE_OPENAI_ENDPOINT="https://azureopenai62143490.openai.azure.com/" <- needs update
+    AZURE_OPENAI_API_KEY="08c96b97791e44ea83c4dff67a76eb32" <- needs update
+    AZURE_OPENAI_DEPLOYMENT_ID="gpt-4o"
+    AZURE_AI_SEARCH_ENDPOINT="https://contososrch799498.search.windows.net" <- needs update
+    AZURE_AI_SEARCH_INDEX="brochures-vector"
+    AZURE_AI_SEARCH_API_KEY="ctkSfXrdBMgyYEIFOkECVmrWrdcRioV7wyAfqRVSNGAzSeAsUWls" <- needs update
+    PGHOST="mg32xpzwcffkg.postgres.database.azure.com" <- needs update
+    PGPORT="5432"
+    PGUSER="contosoadmin" <- make sure this is "contosoadmin"
+    PGDATABASE="pycontosohotel"
+    PGPASSWORD="1234ABcd!"
+
+     > :warning: Make sure the value of PGUSER is "contosoadmin"
+
 1. Save your changes to the **.env** file.
 
-1. Open a new Terminal prompt by selecting **Terminal** from the top menu and then **New Terminal**. Enter the following commands to create environment variables. 
+1. Open a new Terminal prompt by selecting **Terminal** from the top menu and then **New Terminal**. Enter the following commands to create environment variables.
 
     ```
     get-content .env | foreach {
@@ -99,8 +97,18 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
     pf flow test --flow . --interactive
     ```
 
-     > 📓 Try **Where can I ski?** and then **How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?**
+1. Enter or paste (using Ctrl + Shift + V) the question below in the chat terminal (the T button might not work here)
+
+    ```
+    Where can I ski?
+    ```
 
     ![rlb45r1n.jpg](../../media/rlb45r1n.jpg)
+
+1. Enter or paste (using Ctrl + Shift + V) the question below in the chat terminal
+
+    ```
+    How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?
+    ```
 
     ![r55vg1go.jpg](../../media/r55vg1go.jpg)

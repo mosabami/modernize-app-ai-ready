@@ -42,9 +42,23 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
     $CONTOSO_STORAGE_ACCOUNT_NAME="<your storage account name>"
     ```
 
-1. Create a storage container within that storage account
+1. Click on the storage account in Azure portal to open it
+1. Expand **Security + networking** in the left blade and click on **Networking**
+1. Under the **Firewalls and virtual networks** tab set Public network access to **Enable from all networks** (Note: Do not enable public access on your production workloads as this can lead to security issues. We are only doing this for demo purposes.)
+1. Click **Save** at the top
+
+    ![enable public access](../../media/enable-public.png)
+
+1. Create a storage container within that storage account in your VS Code terminal
+
     ```powershell
     az storage container create --name brochures --account-name $CONTOSO_STORAGE_ACCOUNT_NAME
+    ``` 
+
+1. Grant ananymous access to this storage account. NOTE: Do not do this in your production workloads as this can lead to security issues.
+
+    ```powershell
+    az storage container set-permission --name brochures --account-name $CONTOSO_STORAGE_ACCOUNT_NAME --public-access container
     ``` 
 
 1.  Open File Explorer on your computer and go to the **Downloads** folder. Update the following variable to use the path for your **Downloads** folder.
@@ -53,27 +67,7 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
     $PATH_TO_DOWNLOADS_FOLDER = "C:\Users\Admin\Downloads"
     ```
 
-1. In Visual Studio Code, enter the following command at the Terminal window prompt. This command clones assets for this workshop including hotel brochures from a GitHub repository to a folder in your **Downloads** folder. 
-
-    ```
-    git clone https://github.com/microsoft/TechExcel-Modernize-applications-to-be-AI-ready "$PATH_TO_DOWNLOADS_FOLDER\AssetsRepo"
-    ```
-
-    ![8t6tp7c0.png](../../media/8t6tp7c0.png)
-
-1. In Azure Portal, find your Storage account within the **Ignite24** resource group and click on it
-1. Click on the **Blob service** link in the middle window of the Overview page within the **Properties** tab
-1. Click on **+ Container** in the resulting page
-1. Set **Name** field to brochures
-1. Set the **Anonymous access level** to **Container (anonymous read access for containers and blobs)**
-1. Click the **Create** button at the bottom
-1. Expand **Security + networking** in the left blade and click on **Networking**
-1. Under the **Firewalls and virtual networks** tab set Public network access to **Enable from all networks** (Note: Do not enable public access on your production workloads as this can lead to security issues. We are only doing this for demo purposes.)
-1. Click **Save** at the top
-
-    ![enable public access](../../media/enable-public.png)
-
-1. Enter the following command at the Terminal window prompt. This command uploads the brochures to the storage container that you created earlier in this task. You can check out the `C:\Users\Admin\Downloads\AssetsRepo\Assets\PDFs` folder to see what these PDFs look like while the files are uploaded.
+1. In Visual Studio Code, enter the following command at the Terminal window prompt. This command uploads the brochures to the storage container that you created earlier in this task. You can check out the `C:\Users\Admin\Downloads\AssetsRepo\Assets\PDFs` folder to see what these PDFs look like while the files are uploaded.
 
     ```
     az storage blob upload-batch --account-name $CONTOSO_STORAGE_ACCOUNT_NAME --destination brochures --source "$PATH_TO_DOWNLOADS_FOLDER\AssetsRepo\Assets\PDFs" --pattern "*.pdf" --overwrite

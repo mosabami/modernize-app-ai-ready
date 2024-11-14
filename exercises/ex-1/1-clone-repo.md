@@ -45,7 +45,7 @@ Make sure your terminal is PowerShell. If it isn't, click on the button next to 
 1. Enter the command below into your terminal within the Downloads folder to clone the code repository to that folder
 
     ```powershell
-    git clone -b hackathon https://github.com/qxsch/ContosoHotel.git
+    git clone https://github.com/mosabami/ContosoHotel.git
     ```
 
 1. Change directory of your terminal to the folder created by the clone command and open up Visual Studio code within that folder

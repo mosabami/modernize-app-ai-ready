@@ -68,7 +68,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     $RG_NAME = "Ignite24"
     $CONTOSO_ACR_CREDENTIAL = az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv
 
-    $PGUSER = "promptflow"
+    $PGUSER = "contosoadmin"
     $PGPASSWORD = "1234ABcd!"
     $PGDATABASE = "pycontosohotel"
     $PGPORT = "5432"
@@ -91,7 +91,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     ![6g3gphnj.jpg](../../media/6g3gphnj.jpg)
 1. OPTIONAL: Enter the URL provided by your last command in a browser and test it with the same questions in the previous exercise.
 
-1. Enter the following to pull and set the **$CONTOSO_BACKEND_URL** variable for use in the next step.
+1. Enter the following into Visual Studio Code terminal window to pull and set the **$CONTOSO_BACKEND_URL** variable for use in the next step.
 
     ```
     $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
@@ -104,7 +104,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     az containerapp update --name "backend" --resource-group "$RG_NAME" --set-env-vars "CHATBOT_BASEURL=$CONTOSO_CHATBOT_URL"
     ```
 1. Get the URL of your frontend service
-    ```powershell    
+    ```    
     $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_FRONTEND_URL"
     ```

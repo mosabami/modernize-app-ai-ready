@@ -20,7 +20,7 @@ In this task, you’ll build separate containers for front-end and back-end comp
 
 In this task you’ll build a Docker container for the updated app front-end components.
 
-1. In the list of resources, locate the Container Registry instance and get the name (not including the .azurecr.io part). Select **Terminal** from the top menu of your VS code window from the previous step and select **New Terminal**. Update the following variable to use the name of the Azure Container Registry instance (ACR).
+1. In the list of resources, locate the Container Registry instance and get the name (not including the .azurecr.io part). Select **Terminal** from the top menu of your VS code window from the previous step (the VS code window that has the **Frontend** and **Backend** folders) and select **New Terminal**. Make sure it is a PowerShell terminal. Update the variable in the command below to use the name of the Azure Container Registry instance (ACR) and run the command in the terminal.
 
     ```
     $ACR_NAME="ACR_NAME_FROM_AZURE_PORTAL"
@@ -79,13 +79,6 @@ In this task you’ll build a Docker container for the updated app front-end com
     docker push "$ACR_NAME.azurecr.io/pycontosohotel-backend:v1.0.0"
     ```
 
-1. In Visual Studio Code, enter the following commands at the Terminal window prompt. These commands register app providers.
-
-    ```
-    az provider register --namespace Microsoft.App
-    az provider register --namespace Microsoft.OperationalInsights
-    ```
-
    > 📓 It may take 2-3 minutes for these commands to complete.
 
 1. Set the environment variable for your Azure region
@@ -104,13 +97,29 @@ In this task you’ll build a Docker container for the updated app front-end com
 
     ```powershell
     $CONTOSO_ACR_CREDENTIAL = az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv
-    az containerapp env create --name "$CONTOSO_HOTEL_ENV" --resource-group "Ignite24" --location "$AZURE_REGION"
-    Write-Host -ForegroundColor Green  "Default Domain is: $(az containerapp env show --name "$CONTOSO_HOTEL_ENV" --resource-group "Ignite24" --query "properties.defaultDomain" -o tsv)"
+    echo $CONTOSO_ACR_CREDENTIAL
     ```
 
-    > 📓 It may take 2-3 minutes for these commands to complete.
+   > :warning: Make sure you get a valid password output on the echo command above. If you don't, you might have to get the ACR password from the ACR instance in Azure Portal and set the variable manually.
 
-    ![lmve6yr2.png](../../media/lmve6yr2.png)  
+1. Set the postgres FQDN environment variable in your **VS code PowerShell terminal** like you did in the previous terminal. Replace the placeholder in the command below with the proper values before running the command.
+
+    ```powershell
+    $env:PGHOST = "< the Postgres servername you recorded above similar to this format: ignite24apokoay3pdhckpg.postgres.database.azure.com >" 
+    ```
+
+1. Set your connection string as an environment variable
+
+    ```powershell
+    $env:connectionString = "host=$env:PGHOST;port=5432;database=pycontosohotel;user=contosoadmin;password=1234ABcd!;"
+    echo $env:connectionString
+    ```
+
+1. The *POSTGRES_CONNECTION_STRING* should resemble the following. Record the connection string for use later in the lab: 
+
+    ```powershell
+    host=53pkyjrx5j7ve.postgres.database.azure.com;port=5432;database=pycontosohotel;user=contosoadmin;password=1234ABcd!;
+    ```
 
 1. Enter the command at the Visual Studio Code Terminal window prompt and then select **Enter**. These commands create the container app for the back-end app components.
 
@@ -134,10 +143,49 @@ In this task you’ll build a Docker container for the updated app front-end com
 
     > 📓 Record the value for the front-end URL. You’ll use the value later in the lab.
 
-1. Open a browser window and go to [**Azure portal**](https://portal.azure.com). Sign in to Azure if necessary.
-1. Search for the **Ignite24** resource group and select the group.
-1. Locate and select the **backend** container app. If the backend container app isn't showing, click refresh within the Azure portal resource group page and it should show up.
-1. In the left navigation pane for the container app, in the **Settings** section, select **CORS**.
-1. In the **Allowed Origins** field, enter the value for the front-end URL that you recorded in a previous step of this task.
-1. In the **Allowed Methods** Tab, within the **Allowed Methods** field, enter an asterisk ( **\*** ). Select **Apply** to create the CORS policy. This will allow cross origin resource sharing from your frontend so that the requests from the frontend will be allowed to access / share resouces, in this case data from the postgres database, through the backend service which has direct access to those resources. CORS helps provide very limited resouces for browser based applications. For more information about CORS, check out [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
-1. Leave Visual Studio Code open. You’ll run additional commands in the next exercise.
+1. Open a browser tab and navigate to the front-end url, adding "/setup" to the end of the URL if you dont automatically get directed there.
+1. On the **Contoso Hotel Setup** page, select **Setup database**. This launches a script that creates the database schema and populates the tables with data.
+
+    > 📓 The page updates when the script completes.
+
+    ![success.png](../../media/successful-database-setup.png)
+
+1. On the **Contoso Hotel Setup** page, select **Home**. The **Home** page for the app displays.
+
+1. On the **Home** page, select the calendar icon to go to the **Bookings** page.
+
+    ![bzl5gq1d.png](../../media/bzl5gq1d.png)
+
+1. On the **Bookings** page, select **New Booking**.
+
+    ![cbrvrolp.png](../../media/cbrvrolp.png)
+
+1. OPTIONAL: Enter the following information into the page and then select **New Booking**. The page will update to show you that the booking is successfully created.
+
+    | Field | Value |
+    |:---------|:---------|
+    | Hotel   | **Contoso Suites Athens**   |
+    | Visitor   | <Any name available in the Visitor field>|
+    | Check-in   | **12/28/2024**|
+    | Check-out   | **01/05/2025**|
+    | Adults   | **2**|
+    | Rooms   | **1**|
+
+    > ⚠️ The **Visitor** field doesn't search properly. Type in the letter 'a' into the field and select a name from the dropdown list.
+
+    ![izps11yx.jpg](../../media/izps11yx.jpg)
+
+    ![1i44bvk4.png](../../media/1i44bvk4.png)
+
+1. On the **Bookings** page, select **List Bookings**.
+
+1. Enter **Bernd Schuster**, or whichever Visitor you selected, in the **Search** field. The booking that you created should appear in the list of bookings.
+
+    ![7b7dy1c7.png](../../media/7b7dy1c7.png)
+
+1. Close the browser window.
+
+1. In Visual Studio Code, select **Ctrl+C** from the Terminal pane to exit the running worker processes.
+
+1. Leave Visual Studio Code open. You’ll use the tool again in the next exercise.
+

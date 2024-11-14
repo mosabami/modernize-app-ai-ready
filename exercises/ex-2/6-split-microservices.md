@@ -8,12 +8,7 @@ Please note that there are many ways to split your appication into Microservices
 
 ## Description
 
-In this task, you’ll manually separate front-end and back-end components into separate folders.
-
-The key steps are as follows:
-
-1. Create a folder named **UpdatedApp** with subfolders **FrontEnd** and **Backend**.
-1. Copy all front-end files to the **FrontEnd** folder and all back-end files to the **Backend** folder.
+In this task, you’ll clone a repository that has the apps split into frontend and backend because of the limited time available for this lab. For more details about the steps taken to get there, check out [Separate front-end components from back-end components](https://microsoft.github.io/TechExcel-Modernize-applications-to-be-AI-ready/Docs/Ex03/0301.html) **after** this lab.
 
 ## Learning Resources
 
@@ -32,76 +27,13 @@ The key steps are as follows:
 
     ```powershell
     $PATH_TO_DOWNLOADS = "C:\Users\Admin\Downloads"
-    cd $PATH_TO_DOWNLOADS
+    cd "$PATH_TO_DOWNLOADS\ContosoHotel"
     ```
 
-    ![vtuuzcop.png](../../media/vtuuzcop.png)
-
-1. Enter the following command at the Terminal window prompt. This command creates a directory for front-end components.
+1. Clone the repo that already has the Frontend and Backend Split
 
     ```powershell
-    mkdir -p ContosoHotel/UpdatedApp/Frontend
+    git clone https://github.com/mosabami/ContosoHotelMicroservice UpdatedApp
     ```
-
-    ![4wut3qpe.png](../../media/4wut3qpe.png)
-
-1. Enter the following command at the Terminal window prompt. This command creates a directory for back-end components.
-
-    ```powershell
-    mkdir -p ContosoHotel/UpdatedApp/Backend 
-    ```
-
-    ![r9w825ez.png](../../media/r9w825ez.png)
-
-1. Open File Explorer and go to the **Downloads/ContosoHotel** folder. Verify that the **UpdatedApp** folder and subfolders you created are present.
-
-    ![0pd5q1t7.png](../../media/0pd5q1t7.png)
-
-1. Enter the following commands at the Terminal window prompt. These commands copy all necessary files to the **Frontend** folder for the updated app.
-
-    ```powershell
-    cd $PATH_TO_DOWNLOADS\ContosoHotel
-    cp startup.* $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend
-    cp uwsgi.ini $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend
-    cp Dockerfile $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend
-    cp *.docker* $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend
-    cp requirements.txt $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend
-    ```
-    ![rc0em1zh.png](../../media/rc0em1zh.png)
-
-1. Enter the following commands at the Terminal window prompt. These commands create a subfolder in the **Frontend** folder and copy all necessary files to subfolder.
-
-    ```powershell
-    cd $PATH_TO_DOWNLOADS
-
-    cp -r ContosoHotel/contoso_hotel/static $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend\contoso_hotel\
-    cp -r ContosoHotel/contoso_hotel/templates $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend\contoso_hotel\
-    cp ContosoHotel/contoso_hotel/*.py $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Frontend\contoso_hotel\
-    ```
-
-    ![4hvmj7az.png](../../media/4hvmj7az.png)
-
-1. Enter the following commands at the Terminal window prompt. These commands copy all necessary files to the **Backend** folder for the updated app.
-
-    ```powershell
-    cd $PATH_TO_DOWNLOADS\ContosoHotel
-    cp *.sql $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend
-    cp startup.* $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend
-    cp uwsgi.ini $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend
-    cp *docker* $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend
-    cp requirements.txt $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend
-    ```
-
-    ![cy6qnctf.png](../../media/cy6qnctf.png)
-
-1. Enter the following commands at the Terminal window prompt. These commands create a subfolder in the **Backend** folder and copy all necessary files to subfolder.
-
-    ```powershell
-    cd $PATH_TO_DOWNLOADS\
-    cp -r $PATH_TO_DOWNLOADS/ContosoHotel/contoso_hotel/dblayer $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend\contoso_hotel\
-    cp $PATH_TO_DOWNLOADS/ContosoHotel/contoso_hotel/*.py $PATH_TO_DOWNLOADS\ContosoHotel\UpdatedApp\Backend\contoso_hotel\
-    ```
-
-    ![4lx92yj1.png](../../media/4lx92yj1.png)
 
 1. Leave Visual Studio Code open. You’ll use the tool again in the next task.

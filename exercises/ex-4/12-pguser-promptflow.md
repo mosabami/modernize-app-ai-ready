@@ -12,53 +12,12 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
 ## Learning Resources
 
-- [**Secure Azure Database for PostgreSQL**](https://learn.microsoft.com/en-us/training/modules/secure-azure-database-for-postgresql/)
 - [**Develop your own custom copilots with Azure AI Studio**](https://learn.microsoft.com/en-us/training/paths/create-custom-copilots-ai-studio/)
 - [**Get started with prompt flow**](https://learn.microsoft.com/en-us/training/modules/get-started-prompt-flow-ai-studio/)
 - [**Prompt flow in Azure AI Studio**](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/prompt-flow)
 - [**Add a new connection in Azure AI Studio**](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/connections-add)
 
 ## Solution
-
-1. Open a browser window and go to [**Azure portal**](https://portal.azure.com).
-
-1. Search for and select the PostgreSQL database that you created in a previous exercise.
-
-    ![hlodbtra.png](../../media/hlodbtra.png)
-
-1. On the menu bar for the database server, select **Cloud Shell** and then select **Bash** in the **Cloud Shell** pane.
-
-    ![gpk0nqqq.png](../../media/gpk0nqqq.png)
-
-1. Select your subscription from the dropdown list and then select **Apply**.
-
-1. Replace the value for POSTGRESQL_SERVERNAME with the Server name that appears in the **Overview** section for your database server. Then, enter the following commands at the Cloud Shell prompt. These commands connect to the database.
-
-    ```
-    export PGHOST="POSTGRESQL_SERVERNAME"
-    export PGUSER="contosoadmin"
-    export PGPORT="5432"
-    export PGDATABASE="pycontosohotel"
-    export PGPASSWORD="1234ABcd!"
-    psql
-    ```
-
-1. Enter the following SQL statement at the Cloud Shell prompt. This statement creates a read-only user for the Prompt flow chatbot:
-    
-    ```
-    CREATE USER promptflow WITH PASSWORD "1234ABcd!";
-    ```
-
-1. Enter the following SQL statement at the Cloud Shell prompt. These statements grant the user access to the database tables.
-    
-    ```
-    GRANT SELECT ON TABLE hotels TO promptflow;
-    GRANT SELECT ON TABLE bookings TO promptflow;
-    GRANT SELECT ON TABLE visitors TO promptflow;
-    GRANT EXECUTE ON FUNCTION getroomsusagewithintimespan TO promptflow;
-    ```
-
-    ![qq3r508d.png](../../media/qq3r508d.png)
 
 1. Return to Visual Studio Code. Enter the following command at the Terminal window prompt. This command creates a unique name for an AI Hub.
 

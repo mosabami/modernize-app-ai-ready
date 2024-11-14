@@ -36,15 +36,7 @@ In this task, you’ll review the **Azure Database for PostgreSQL - Flexible Ser
 
 1. After the deployment completes the change to your policy, click on the Connect button again until your terminal looks like is shown in the picture below
     ![sdsddssd32.png](../../media/sdsddssd32.png)
-1. Enter the password `1234ABcd!` **manually** in the field provided and hit enter. As you type the password, you wont see the cursur move for security purposes but it is entering.
-1. Enter the command below to see the tables within the database by copying and pasting the code block below. **To paste in Azure cloud shell, right click in the terminal and click on "Paste as plain text" or enter Ctrl + Shift + V shortcut**. **Don't include the "sql" part of the command below**.
 
-    ```sql
-    SELECT table_name
-    FROM information_schema.tables
-    ```
-
-    You will notice that there are presently no tables available. Tables and data will be added programatically in later exercises.You can run this command again afterwards to see the difference.
 1. Set the postgresfqdn environment variable in your **VS code PowerShell terminal** (the same terminal you have been using). Replace the placeholder in the command below with the proper values before running the command.
 
     ```powershell

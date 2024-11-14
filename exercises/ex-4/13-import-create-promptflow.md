@@ -96,7 +96,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
     | Field | Value |
     |:---------|:---------|
     | Custom keys      | **user**   |
-    | Value   | **promptflow**|
+    | Value   | **contosoadmin**|
 
 1. Select **+ Add key value pairs**.
 
@@ -128,7 +128,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
 1. In the **Connection name** field, enter **postgresql** and then select **Add connection**. Wait while the connection is created. The connection should resemble the following screenshot:
 
-    ![435pbqb5.png](../../media/435pbqb5.png)
+    ![435pbqb5.png](../../media/435pbqb55.png)
 
 1. From **Settings**, select **+ New Connection** again.
 
@@ -198,9 +198,3 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
     ![0i58d1im.png](../../media/0i58d1im.png)
     
     ![kjpn148g.png](../../media/kjpn148g.png)
-
-1. Start a new conversation and enter **How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?**. Your results should resemble the following:
-
-    ![d4vy2plk.png](../../media/d4vy2plk.png)
-    
-    ![is89pwm5.png](../../media/is89pwm5.png)
