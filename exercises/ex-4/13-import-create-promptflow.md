@@ -29,7 +29,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
     > 📓 If you closed the window, go to [**Azure AI Studio**](ai.azure.com).
 
-    > 📓 If you already created a new project via the new experience earlier, you don't need to recreate a project as described below.
+    > :warning: If you already created a new project via the new experience earlier, you don't need to recreate a project as described below. If you didn't name the project you created **contosopf**, please edit the name now.
 
 1. In the left navigation pane for the hub, select **Hub Overview**.
 
@@ -156,6 +156,8 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
 1. In the left navigation pane, under the **Components** section, select **Deployments**, and then select your **gpt-4o** model.
 
+    ![fidning40.jpg](../../media/finding-g4o.png)
+
     ![pdukb2u9.jpg](../../media/pdukb2u9.jpg)
 
      > :warning: In the new experience, use the picture below to find the location where the button is
@@ -166,7 +168,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
     ![owefizvl.jpg](../../media/owefizvl.jpg)
 
-1. The **Tokens per Minute Rate Limit** needs to be increased from the default for the chatbot to function.
+1. The **Tokens per Minute Rate Limit** needs to be changed for the chatbot to function properly.
 
     1. Change the value to **10K**.
     1. Select **Save and close**.

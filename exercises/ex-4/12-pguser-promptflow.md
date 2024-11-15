@@ -43,8 +43,6 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
 1. In the left navigation pane, in the **Management** section, select **All Resources**.
 
-     > :warning: If you get the new experience, if you are prompted to create a new **Project**, go ahead and do so with the name set to **contosopf**.
-
 1. On the page that displays, select **+New hub**.
 
     ![yrjv147m.png](../../media/yrjv147m.png)
@@ -71,6 +69,7 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
     ![y7yaln2q.png](../../media/y7yaln2q.png)
 
      > :warning: As the resources are being provisioned, take a screenshot of the page that displays. You’ll need to enter the AI Hub name and the Storage account name later in this task. Otherwise, you can go to the resource group in Azure portal to see the resource names.
+     > :warning: If you get the new experience, you may be prompted to create a new **Project**, go ahead and do so with the name set to **contosopf**.
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com).
 

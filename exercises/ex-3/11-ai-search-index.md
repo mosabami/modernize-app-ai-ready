@@ -57,7 +57,8 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
     ![vgpo13i3.png](../../media/vgpo13i3.png)
 
-1. On the **Advanced settings** page, select **Enable semantic ranker**. In the **Schedule indexing** dropdown list, select **Once**.
+1. On the **Advanced settings** page, if you see the **Enable semantic ranker** field, make sure it is checked. The new version being rolled out has it automatically enabled.
+1. In the **Schedule indexing** dropdown list, select **Once**.
 
     ![9wx3fylu.png](../../media/9wx3fylu.png)
 
