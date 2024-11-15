@@ -31,7 +31,9 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
      > 📓 Record the name of the AI Hub. You’ll use the name later in this task.
 
-1. Open a browser window and go to **https://ai.azure.com/**.
+1. Open a browser window and go to **https://ai.azure.com/manage**.
+
+     > :warning: Azure AI Hub was recently updated ahead of ignite, so your experience might be a little different. I will provide information on the new experience as we go along. 
 
 1. On the Azure AI Studio home page, select **Sign in**. 
 
@@ -40,6 +42,8 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 1. If prompted, enter your credentials to sign into Azure AI Studio:
 
 1. In the left navigation pane, in the **Management** section, select **All Resources**.
+
+     > :warning: If you get the new experience, if you are prompted to create a new **Project**, go ahead and do so with the name set to **contosopf**.
 
 1. On the page that displays, select **+New hub**.
 
@@ -50,7 +54,7 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
     | Setting | Value |
     |:---------|:---------|
-    | Hub name   | Use the AI Hub name that you recorded in step 8 of this task.  |
+    | Hub name   | Use the AI Hub name that you recorded in the previous step.  |
     | Subscription  | Use the subscription where you deployed all other resources.|
     | Resource group | **Ignite24** |
     | Location |Enter the location for the region where you deployed all other resources**|
@@ -72,9 +76,9 @@ In this task, you’ll create a hub and then create a project within the hub. Yo
 
 1. In the **Search** field at the top of the home page, enter **Resource groups** and then select **Ignite24**.
 
-1. Filter the list of resources by using the **Type** column. You should see two storage accounts. The first is the storage account that you created earlier in the lab. The other was created by the AI Hub. Select this storage account.
+1. Filter the list of resources by using the **Type** column. You should see two storage accounts. The first is the storage account that you created earlier in the lab. The other was the new one created by the AI Hub. Select this new storage account.
 
-    > 📓 The name for the newly created storage account will start with **st**. You can also use the screenshot you captured in Step 16 to identify the storage account name to use here.
+    > 📓 The name for the newly created storage account will start with **st**.
 
 1. In the left navigation pane for the storage account, select **Access Control (IAM)**.
 

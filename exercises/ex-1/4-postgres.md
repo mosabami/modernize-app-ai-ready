@@ -37,7 +37,7 @@ In this task, you’ll review the **Azure Database for PostgreSQL - Flexible Ser
 1. After the deployment completes the change to your policy, click on the Connect button again until your terminal looks like is shown in the picture below
     ![sdsddssd32.png](../../media/sdsddssd32.png)
 
-1. Set the postgresfqdn environment variable in your **VS code PowerShell terminal** (the same terminal you have been using). Replace the placeholder in the command below with the proper values before running the command.
+1. Set the postgres FQDN environment variable in your **VS code PowerShell terminal** (the same terminal you have been using). Replace the placeholder in the command below with the proper values before running the command.
 
     ```powershell
     $env:PGHOST = "< the Postgres servername you recorded above similar to this format: ignite24apokoay3pdhckpg.postgres.database.azure.com >" 

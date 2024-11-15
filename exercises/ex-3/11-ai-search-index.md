@@ -47,7 +47,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
     | Setting | Value |
     |:---------|:---------|
     | Kind   | **Azure OpenAI**  |
-    | Azure OpenAI service  | The name you recorded in Task 01 Step 20.|  
+    | Azure OpenAI service  | The name you azure OpenAI service in the found in the portal.|  
     | Model deployment | **text-embedding-ada-002** |
     |Authentication type | **System assigned identity**|
 
@@ -61,11 +61,11 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
     ![9wx3fylu.png](../../media/9wx3fylu.png)
 
-1. On the **Review and create** page, enter **brochures-vector** in the **Objects name prefix** text field and then select **Create**. Wait for the creation process to complete and select **Close**.
+1. On the **Review and create** page, enter **brochures** in the **Objects name prefix** text field and then select **Create**. Wait for the creation process to complete and select **Close**.
 
     ![dblr2z51.png](../../media/dblr2z51.png)
 
-    > :warning: Make sure you set the Objects name prefix to 'brocures-vector' or you might have to take extra configuration steps later. It should take only a few minutes for the Import and vectorize data tool to index the data from the 40 hotel brochures.
+    > :warning: Make sure you set the Objects name prefix to 'brochures' or you might have to take extra configuration steps later. It should take only a few minutes for the Import and vectorize data tool to index the data from the 40 hotel brochures.
 
 1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexers**.
 
@@ -73,7 +73,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
      > :warning: The Status for the indexer should be *Succeeded*. If the Status indicates that indexing is still in progress, wait a few minutes and refresh the page. If the Status shows as *Failed*, select the indexer to review error messages and then notify your coach.
 
-1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexes** and then select the index.
+1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexes** and then select the index called **brochures**.
 
     ![fzle8i6m.png](../../media/fzle8i6m.png)
 
