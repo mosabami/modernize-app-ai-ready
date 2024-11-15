@@ -11,23 +11,17 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
 
 ## Solution
 
-1. Open File Explorer and go to the **Downloads\AssetsRepo\Assets** folder.
-
-1. Double-click **lab-6-promptflow.zip**. Select **Extract all** and then select **Extract**.
-
-1. Launch Visual Studio Code as an administrator.
+1. Launch a new Visual Studio Code window as an administrator.
 
 1. From the menu bar, select **File** and then select **Open Folder**.
 
-1. Navigate into **AssetsRepo/Assets**, select **lab-6-promptflow**, and then select **Select folder**.
+1. Navigate into **Downloads/AssetsRepo/Assets**, select **lab-6-promptflow**, and then select **Select folder**.
 
     ![7s3lyr99.jpg](../../media/7s3lyr99.jpg)
 
 1. Select the option to **Trust the authors**.
 
-1. In the Explorer pane, expand **lab-6-promptflow**.
-
-1. Select **.env** to open the file in an Editor window. For the next step, you will need the notes below to get the correct value.
+1. In the Explorer pane, select the **.env** file to open the file in an Editor window. For the next step, you will need the notes below to get the correct value.
 
     > 📓 To locate the values for AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY, in the Azure portal, select the Azure OpenAI resource you created. In the **Resource Management** section, select **Keys and Endpoints**. Use the Endpoint URL for AZURE_OPENAI_ENDPOINT and the key 1 value for AZURE_OPENAI_API_KEY.
 
@@ -97,7 +91,7 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
     pf flow test --flow . --interactive
     ```
 
-1. Enter or paste (using Ctrl + Shift + V) the question below in the chat terminal (the T button might not work here)
+1. Enter the question below in the chat terminal manually (the T button might not work here)
 
     ```
     Where can I ski?
@@ -105,7 +99,7 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
 
     ![rlb45r1n.jpg](../../media/rlb45r1n.jpg)
 
-1. Enter or paste (using Ctrl + Shift + V) the question below in the chat terminal
+1. Enter the following to query the database
 
     ```
     How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?

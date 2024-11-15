@@ -91,10 +91,15 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     ![6g3gphnj.jpg](../../media/6g3gphnj.jpg)
 1. OPTIONAL: Enter the URL provided by your last command in a browser and test it with the same questions in the previous exercise.
 
+    ```
+    How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?
+    ```
+
 1. Enter the following into Visual Studio Code terminal window to pull and set the **$CONTOSO_BACKEND_URL** variable for use in the next step.
 
     ```
     $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_BACKEND_URL"
     ```
 
 1. Enter the following commands in the Visual Studio Code Terminal window prompt. These commands update the application front-end.
@@ -108,12 +113,10 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_FRONTEND_URL"
     ```
-1. Copy the frontend URL provided in the last command and paste it in a new browser tab. Click on the calendar sign if it shows. Then click on the robot icon at the bottom left corner of the resulting screen. This will slide out a chat window.
+1. Copy the frontend URL provided in the last command and paste it in a new browser tab. Click on the calendar sign if it shows. Then click on the robot icon at the bottom right corner of the resulting screen. This will slide out a chat window.
     ![robot-button.jpg](../../media/robot-button.png)
 
 1. Go ahead and chat with your new application
     ![robot-button.jpg](../../media/chating-chatbot.png)
 
-This concludes this lab.
-    
-> :warning: Please remember to decommission all resources from this lab once you complete the lab to avoid security issues or incurring costs.
+This concludes this lab. You have successfully broken an monolithic app into Microservices, containerized them, added a new AI feature to it and deployed all services to Azure. Congratulations!

@@ -29,6 +29,8 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
     > 📓 If you closed the window, go to [**Azure AI Studio**](ai.azure.com).
 
+    > 📓 If you already created a new project via the new experience earlier, you don't need to recreate a project as described below.
+
 1. In the left navigation pane for the hub, select **Hub Overview**.
 
 1. On the Overview page for the hub, locate the **Projects** section and select **+ New project**.
@@ -40,6 +42,10 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 1. In the left navigation pane for the project page, in the **Tools** section, select **Prompt flow**.
 
     ![u25i702l.png](../../media/u25i702l.png)
+
+    > 📓 Promptflow is located somewhere else in the new experience, you can find it as indicated in the picture below
+
+    ![pflow.png](../../media/new-promptflow.png)
 
 1. On the **Create, iterate, and debug your orchestration flows** page, select **+Create**.
 
@@ -76,6 +82,10 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
     ![zpzeywmf.png](../../media/zpzeywmf.png)
 
+     > :warning: In the new experience, the + New Connection can be found at a different location as indicated in the picture below.
+
+    ![zpzeywmf.png](../../media/new-new-conn-location.png)
+
 1. On the **Add a connection to external assets** page, select **Custom keys**.
 
     ![b701wgpu.png](../../media/b701wgpu.png)
@@ -87,7 +97,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
     | Field | Value |
     |:---------|:---------|
     | Custom keys      | **hostname**   |
-    | Value   | Use the server name you copied in Step 14 of this lab|
+    | Value   | Use the server name you copied in the step above |
 
 1. Select **+ Add key value pairs**.
 
@@ -132,6 +142,10 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
 1. From **Settings**, select **+ New Connection** again.
 
+     > :warning: In the new experience, use the picture below to find the location where the button is
+
+    ![connsearch.png](../../media/conn-search.png)
+
 1. Select **Azure AI Search**.
 
     ![wyeywz0q.jpg](../../media/wyeywz0q.jpg)
@@ -143,6 +157,10 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 1. In the left navigation pane, under the **Components** section, select **Deployments**, and then select your **gpt-4o** model.
 
     ![pdukb2u9.jpg](../../media/pdukb2u9.jpg)
+
+     > :warning: In the new experience, use the picture below to find the location where the button is
+
+    ![connsearch.png](../../media/new-edit-model.png)
 
 1. Select **Edit**.
 
@@ -158,6 +176,12 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
     ![abwb2txg.jpg](../../media/abwb2txg.jpg)
 
 1. In the left navigation pane for the flow, in the **Tools** section, select **Prompt flow** and then select the prompt flow that you created.
+1. 
+1.      > :warning: In the new experience, use the pictures below to find the location where the button is
+
+    ![newgo.png](../../media/new-go-project.png)
+
+    ![selectpflow.png](../../media/select-promptflow.png)
 
 1. Select **Start compute session**. This allows you to run and test the chatbot. Continue to the next steps to finish configurations while this starts.
 
@@ -196,5 +220,16 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 1. Select the **X** on the warning in the Chat, then send **Where can I ski?** again. Your results should resemble the following:
 
     ![0i58d1im.png](../../media/0i58d1im.png)
-    
+
     ![kjpn148g.png](../../media/kjpn148g.png)
+
+    This prompt used the flow and underlying connected AI services to detect your intent to pull data from the brocheurs stored in Azure search, successfully searched the index and returned the values.
+
+1. Enter the question below in the chat box
+
+    ```
+    How many free rooms do hotels in Switzerland have grouped by hotel on 2024-10-10?
+    ```
+    This prompt detected your intent to get information from the database and used Azure OpenAI service to create a SQL query used to pull data from the database to return the result similar to what you see below.
+
+    ![sql.png](../../media/sql-response1.png)
