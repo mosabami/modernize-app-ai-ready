@@ -185,7 +185,3 @@ In this task you’ll build a Docker container for the updated app front-end com
 
 1. Close the browser window.
 
-1. In Visual Studio Code, select **Ctrl+C** from the Terminal pane to exit the running worker processes.
-
-1. Leave Visual Studio Code open. You’ll use the tool again in the next exercise.
-
