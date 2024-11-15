@@ -33,4 +33,6 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
 
     ![1ri1l25o.png](../../media/1ri1l25o.png)
 
-1. Close the browser tab and move on to the next step.
+1. Close the browser tab, head back to VS code terminal and enter **Ctrl + C** multiple times until the process stops so you can use the terminal for future steps.
+
+    > ⚠️ This will not stop the running container. To stop the running container, you will need to stop it in Docker Desktop, which is not a required step in this lab. This means port 8002 will continue to be in use. If you have to run a container again for whatever reason, use a different port than 8002.
