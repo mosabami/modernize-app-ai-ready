@@ -4,7 +4,7 @@
 
 The Contoso Hotel legacy app is monolithic. That is, front-end components and back-end components are deployed as a single unit. Mololithic apps don’t scale very well. Contoso wants to ensure that the app scales to meet expected increases in demand.
 
-Please note that there are many ways to split your appication into Microservices. In this workshop, we are only going to be splitting the app into a frontend service and a backend service for simplicity. This will allow us to add a 3rd service that will add new features, in this case, AI features to the application. For more information about splitting applications into Microservices, check out [Migrate a monolithic application to microservices using domain-driven design](https://learn.microsoft.com/en-us/azure/architecture/microservices/migrate-monolith). For a comprehensive guide on building microservices, check out the [Microservices architecture design](https://learn.microsoft.com/en-us/azure/architecture/microservices/) guides.
+Please note that there are many ways to split your application into Microservices. In this workshop, we are only going to be splitting the app into a frontend service and a backend service for simplicity. This will allow us to add a 3rd service that will add new features, in this case, AI features to the application. For more information about splitting applications into Microservices, check out [Migrate a monolithic application to microservices using domain-driven design](https://learn.microsoft.com/en-us/azure/architecture/microservices/migrate-monolith). For a comprehensive guide on building microservices, check out the [Microservices architecture design](https://learn.microsoft.com/en-us/azure/architecture/microservices/) guides.
 
 ## Description
 

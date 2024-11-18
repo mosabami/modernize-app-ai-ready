@@ -85,6 +85,9 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     "AZURE_OPENAI_ENDPOINT=$AZURE_OPENAI_ENDPOINT" "AZURE_OPENAI_API_KEY=secretref:openaikey" `
     "PGHOST=$PGHOST" "PGPORT=$PGPORT" "PGUSER=$PGUSER" "PGDATABASE=$PGDATABASE" "PGPASSWORD=secretref:pgpassword"
     $CONTOSO_CHATBOT_URL = "https://$(az containerapp show --name "chatbot" --resource-group "$RG_NAME" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    ```
+
+    ```
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_CHATBOT_URL"
     ```
 
@@ -99,6 +102,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 
     ```
     $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_BACKEND_URL"
     ```
 
@@ -111,6 +115,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 1. Get the URL of your frontend service
     ```    
     $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_FRONTEND_URL"
     ```
 1. Copy the frontend URL provided in the last command and paste it in a new browser tab. Click on the calendar sign if it shows. Then click on the robot icon at the bottom right corner of the resulting screen. This will slide out a chat window.

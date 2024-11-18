@@ -18,7 +18,7 @@ https://learn.microsoft.com/en-us/training/modules/publish-container-image-to-az
 
 ## Solution
 
-1. Assuming you successfully created your environment variable for `connectionString` in the previous step, enter the command at the Visual Studio Code Terminal window prompt and then select **Enter**. This command starts the containerized app.
+1. Assuming you successfully created your environment variable for `connectionString` in the previous step, enter the docker run command at the Visual Studio Code Terminal window prompt and then select **Enter**. This command starts the containerized app.
     > :warning: Ensure your Docker Desktop is running before running the command below. If Docker desktop says Docker is stopped, you can close the program and reopen it.
 
     ```

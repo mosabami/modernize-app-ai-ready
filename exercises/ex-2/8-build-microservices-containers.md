@@ -20,7 +20,7 @@ In this task, you’ll build separate containers for front-end and back-end comp
 
 In this task you’ll build a Docker container for the updated app front-end components.
 
-1. In the list of resources, locate the Container Registry instance and get the name (not including the .azurecr.io part). Select **Terminal** from the top menu of your VS code window from the previous step (the VS code window that has the **Frontend** and **Backend** folders) and select **New Terminal**. Make sure it is a PowerShell terminal. Update the variable in the command below to use the name of the Azure Container Registry instance (ACR) and run the command in the terminal.
+1. In Azure portal, wthin the **ignite24** resource group, locate the Container Registry instance and get the name (not including the .azurecr.io part). Select **Terminal** from the top menu of your VS code window from the previous step (the VS code window that has the **Frontend** and **Backend** folders) and select **New Terminal**. Make sure it is a PowerShell terminal. Update the variable in the command below to use the name of the Azure Container Registry instance (ACR) and run the command in the terminal.
 
     ```
     $ACR_NAME="ACR_NAME_FROM_AZURE_PORTAL"
@@ -93,7 +93,7 @@ In this task you’ll build a Docker container for the updated app front-end com
     $CONTOSO_HOTEL_ENV = "<your ACA environment name>"
     ```
 
-1. Enter the following commands at the Terminal window prompt. These commands will display the container app environment default domain as well as get the ACR credential required for the container app to be create.
+1. Enter the following commands at the Terminal window prompt. These commands will display the container app environment default domain as well as get the ACR credential required for the container app to be created. Save the value printed in the terminal in your Notepad ++.
 
     ```powershell
     $CONTOSO_ACR_CREDENTIAL = az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv
@@ -121,7 +121,7 @@ In this task you’ll build a Docker container for the updated app front-end com
     host=53pkyjrx5j7ve.postgres.database.azure.com;port=5432;database=pycontosohotel;user=contosoadmin;password=1234ABcd!;
     ```
 
-1. Enter the command at the Visual Studio Code Terminal window prompt and then select **Enter**. These commands create the container app for the back-end app components.
+1. Enter the following command at the Visual Studio Code Terminal window prompt and then select **Enter**. These commands create the container app for the back-end app components.
 
     ```powershell
     az containerapp create --name "backend" --resource-group "Ignite24" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-backend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "POSTGRES_CONNECTION_STRING=$env:connectionString"

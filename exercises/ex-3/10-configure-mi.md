@@ -22,7 +22,7 @@ In this task, you’ll create a set of managed identities so that the various Az
 
 1. In the left navigation pane, in the **Resource Management** section, select **Identity**.
 
-1. Verify that the value for the **Status** field on the **System assigned** tab is set to **On**.
+1. Verify that the value for the **Status** field on the **System assigned** tab is set to **On** then hit **Save**.
 
     ![7mfk2i92.png](../../media/7mfk2i92.png)
 

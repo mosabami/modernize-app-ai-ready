@@ -21,7 +21,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
 1. On the Azure Home page, select **Resource groups** and then select **Ignite24**.
 
-1. In the list of resources that displays, select the **Azure AI Search service** instance from the list of resources.
+1. In the list of resources that displays, select the **Search service** instance from the list of resources.
 
 1. On the **Overview** page for the Search service, select **Import and vectorize data**.
 
@@ -72,7 +72,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
     ![0aurkfrp.png](../../media/0aurkfrp.png)
 
-     > :warning: The Status for the indexer should be *Succeeded*. If the Status indicates that indexing is still in progress, wait a few minutes and refresh the page. If the Status shows as *Failed*, select the indexer to review error messages and then notify your coach.
+     > :warning: The Status for the indexer should be *Success*. If the Status indicates that indexing is still in progress, wait a few minutes and refresh the page. If the Status shows as *Failed*, select the indexer to review error messages and then notify your coach.
 
 1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexes** and then select the index called **brochures**.
 
