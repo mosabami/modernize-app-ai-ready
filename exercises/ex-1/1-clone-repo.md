@@ -1,6 +1,6 @@
 # Task 01 - Clone the GitHub repository for the project to your local machine
 
-Now that you have completed the first time of the lab, we will be moving on to the second part of the lab where you will learn how to:
+Now that you have completed the first part of the lab, we will be moving on to the second part of the lab where you will learn how to:
 1. Decompose a monolithic app into two components (can be considered microservices but in this case we keep it simple by breaking it into frontend and backend services)
 1. Containerize the services and push the container images to the cloud
 1. Create container services in Azure container apps
@@ -30,7 +30,7 @@ You will also need to setup an account for your user within the virtual machine 
 
 ### Begin the workshop
 
-    > :warning: Throughout this lab, we will be using PowerShell as our terminal withi Visual Studio Code (VS Code). We will begin by opening up powershell, then cloning the required code to our Downloads folder. In addition, you will be advised to store certain values. You are advised to open up a **Notepad ++** instance in the virtual environment and store those values in there for easy access. Also, when you have to modify commands, you are advised to copy the command into notepad and make the edits there as it is easier to do edits in Notepad ++ than directly in the terminal.
+>  Throughout this lab, we will be using PowerShell as our terminal withi Visual Studio Code (VS Code). We will begin by opening up powershell, then cloning the required code to our Downloads folder. In addition, you will be advised to store certain values. You are advised to open up a **Notepad ++** instance in the virtual environment and store those values in there for easy access. Also, when you have to modify commands, you are advised to copy the command into notepad and make the edits there as it is easier to do edits in Notepad ++ than directly in the terminal.
 
 In this task, you’ll clone the GitHub repository to the **Downloads** folder on your local machine.
 

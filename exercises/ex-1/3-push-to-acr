@@ -6,7 +6,7 @@ Azure Container Registry (ACR) is a managed, private Docker registry service pro
 
 ## Description
 
-In this task, you’ll sign into your Azure portal, view existing Azure Container Registry and push your newly created image to the container registry.
+In this task, you’ll sign into your Azure portal, view the existing Azure Container Registry and push your newly created image to the container registry.
 
 The key steps are as follows:
 
