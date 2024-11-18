@@ -27,10 +27,12 @@ The key steps are as follows:
 1. Log in with the provided credentials:
 1. At the **Global search bar** at the top of the portal, enter "resource groups" and select it from the dropdown
 1. You should find a resource group called "Ignite24". Clicking on it will reveal the resources required for this lab already provisioned for you.
-1. Find your **Azure Container Registry** resource and set its name as an environment variable using the command below.
+1. Find your **Azure Container Registry** resource and copy it into your notepad ++ to be used later, then set its name as an environment variable using the command below.
     ```powershell
     $ACR_NAME = "<your ACR name>"
     ```
+
+    > :warning: Record the ACR name. You’ll need to supply the ACR name again later in the lab.
 
 1. Enter the following command at the Terminal window prompt and then select **Enter** to log into Azure. 
 
@@ -41,8 +43,6 @@ The key steps are as follows:
 
     ![x8ary55x.jpg](../../media/x8ary55x.jpg)
 
-    > :warning: Record the ACR name. You’ll need to supply the ACR name again later in the lab.
-
 1. Enter the following command at the Terminal window prompt and then select **Enter**. This command signs you in to the ACR instance.
 
     ```powershell
@@ -50,7 +50,7 @@ The key steps are as follows:
     ```
 
     ![266ttbar.png](../../media/266ttbar.png)
-1. When a message displays stating that you’ve logged into Microsoft Azure, close the web page and return to Visual Studio Code.
+1. If a message displays stating that you’ve logged into Microsoft Azure, close the web page and return to Visual Studio Code.
 
     ![3hf4vlmd.png](../../media/3hf4vlmd.png)
 

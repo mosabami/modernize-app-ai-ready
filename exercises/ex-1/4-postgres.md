@@ -25,7 +25,7 @@ The key steps are as follows:
 
 In this task, you’ll review the **Azure Database for PostgreSQL - Flexible Server** provisioned for you and capture your connection string.
 
-1. Head to the Azure Portal and navigate to your **ContosoHotel** resource group.
+1. Head to the Azure Portal and navigate to your **ignite24** resource group.
 1. Find the **Azure Database for PostgreSQL - Flexible Server** instance and click on it.
 1. Record your Server name which you can find in the top right side of the Overview page.
     ![sdsa42232.png](../../media/sdsa42232.png)
