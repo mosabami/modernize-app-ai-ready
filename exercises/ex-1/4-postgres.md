@@ -29,12 +29,12 @@ In this task, you’ll review the **Azure Database for PostgreSQL - Flexible Ser
 1. Find the **Azure Database for PostgreSQL - Flexible Server** instance and click on it.
 1. Record your Server name which you can find in the top right side of the Overview page.
     ![sdsa42232.png](../../media/sdsa42232.png)
-1. Click on the Databases panel under Settings in the left navigation pane sdsddssd32
+1. Click on the Databases panel under Settings in the left navigation pane
 1. Click on the **Connect** button next to the pycontosohotel database and click **Yes** to the popup
 
     > :warning: For security reasons, you would not want to click Yes for your dev or production workloads at work. This is done purely for demo purposes.
 
-1. After the deployment completes the change to your policy, click on the Connect button again until your terminal looks like is shown in the picture below
+1. After the deployment completes the change to your policy, click on the Connect button again until your terminal looks like is shown in the picture below. You can close the terminal at this point.
     ![sdsddssd32.png](../../media/sdsddssd32.png)
 
 1. Set the postgres FQDN environment variable in your **VS code PowerShell terminal** (the same terminal you have been using). Replace the placeholder in the command below with the proper values before running the command.
