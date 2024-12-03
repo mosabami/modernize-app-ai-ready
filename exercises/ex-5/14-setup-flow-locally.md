@@ -31,6 +31,7 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
 
 1. Update the variables marked below you find in the **.env** file  with values you get as described in the notes above as well as parameters you used in previous steps.
 
+    ```bash
     AZURE_OPENAI_ENDPOINT="https://azureopenai62143490.openai.azure.com/" <- needs update
     AZURE_OPENAI_API_KEY="08c96b97791e44ea83c4dff67a76eb32" <- needs update
     AZURE_OPENAI_DEPLOYMENT_ID="gpt-4o"
@@ -42,6 +43,7 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
     PGUSER="contosoadmin" <- make sure this is "contosoadmin"
     PGDATABASE="pycontosohotel"
     PGPASSWORD="1234ABcd!"
+    ```
 
      > :warning: Make sure the value of PGUSER is "contosoadmin"
 
