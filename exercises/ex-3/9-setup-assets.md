@@ -67,6 +67,12 @@ In this task, you’ll add an Azore storage container to an existing Storage acc
     $PATH_TO_DOWNLOADS_FOLDER = "C:\Users\Admin\Downloads"
     ```
 
+1. Clone the repo that has the required assets
+
+    ```powershell
+    git clone https://github.com/microsoft/TechExcel-Modernize-applications-to-be-AI-ready "$PATH_TO_DOWNLOADS_FOLDER\AssetsRepo"
+    ```
+
 1. In Visual Studio Code, enter the following command at the Terminal window prompt. This command uploads the brochures to the storage container that you created earlier in this task. You can check out the `C:\Users\Admin\Downloads\AssetsRepo\Assets\PDFs` folder to see what these PDFs look like while the files are uploaded.
 
     ```

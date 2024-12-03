@@ -66,7 +66,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
     ![dblr2z51.png](../../media/dblr2z51.png)
 
-    > :warning: Make sure you set the Objects name prefix to 'brochures' or you might have to take extra configuration steps later. It should take only a few minutes for the Import and vectorize data tool to index the data from the 40 hotel brochures.
+    > :warning: Make sure you set the Objects name prefix to 'brochures-vector' or you might have to take extra configuration steps later. It should take only a few minutes for the Import and vectorize data tool to index the data from the 40 hotel brochures.
 
 1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexers**.
 
@@ -74,7 +74,7 @@ In this task, you’ll use Azure AI Search to import and vectorize data from the
 
      > :warning: The Status for the indexer should be *Success*. If the Status indicates that indexing is still in progress, wait a few minutes and refresh the page. If the Status shows as *Failed*, select the indexer to review error messages and then notify your coach.
 
-1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexes** and then select the index called **brochures**.
+1. In the left navigation pane for the **Search Service** instance, in the **Search management** section, select **Indexes** and then select the index called **brochures-vector**.
 
     ![fzle8i6m.png](../../media/fzle8i6m.png)
 
