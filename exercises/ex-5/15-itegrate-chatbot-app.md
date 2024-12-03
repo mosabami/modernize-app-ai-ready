@@ -77,14 +77,14 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 1. Enter the following commands in the Terminal to deploy the container to ACR and set environment variables. 
 
     ```
-    az containerapp create --name "chatbot" --resource-group "$RG_NAME" --environment "$CONTOSO_HOTEL_ENV" `
+    az containerapp create --name "chatbot" --resource-group "$RGNAME" --environment "$CONTOSO_HOTEL_ENV" `
     --image "$ACR_NAME.azurecr.io/chatbot:v1.0.0" --target-port 8080 --transport http --ingress external `
     --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" `
     --secrets "searchkey=$AZURE_AI_SEARCH_API_KEY" "openaikey=$AZURE_OPENAI_API_KEY" "pgpassword=$PGPASSWORD" `
     --env-vars "AZURE_AI_SEARCH_ENDPOINT=$AZURE_AI_SEARCH_ENDPOINT" "AZURE_AI_SEARCH_API_KEY=secretref:searchkey" `
     "AZURE_OPENAI_ENDPOINT=$AZURE_OPENAI_ENDPOINT" "AZURE_OPENAI_API_KEY=secretref:openaikey" `
     "PGHOST=$PGHOST" "PGPORT=$PGPORT" "PGUSER=$PGUSER" "PGDATABASE=$PGDATABASE" "PGPASSWORD=secretref:pgpassword"
-    $CONTOSO_CHATBOT_URL = "https://$(az containerapp show --name "chatbot" --resource-group "$RG_NAME" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    $CONTOSO_CHATBOT_URL = "https://$(az containerapp show --name "chatbot" --resource-group "$RGNAME" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     ```
 
     ```
@@ -109,8 +109,8 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 1. Enter the following commands in the Visual Studio Code Terminal window prompt. These commands update the application front-end.
 
     ```
-    az containerapp update --name "frontend" --resource-group "$RG_NAME" --set-env-vars "CHATBOT_BASEURL=$CONTOSO_BACKEND_URL"
-    az containerapp update --name "backend" --resource-group "$RG_NAME" --set-env-vars "CHATBOT_BASEURL=$CONTOSO_CHATBOT_URL"
+    az containerapp update --name "frontend" --resource-group "$RGNAME" --set-env-vars "CHATBOT_BASEURL=$CONTOSO_BACKEND_URL"
+    az containerapp update --name "backend" --resource-group "$RGNAME" --set-env-vars "CHATBOT_BASEURL=$CONTOSO_CHATBOT_URL"
     ```
 1. Get the URL of your frontend service
     ```    
