@@ -16,7 +16,7 @@ In this task, you’ll create a set of managed identities so that the various Az
 
 1. Open a browser window and go to [**Azure portal**](https://portal.azure.com). Sign in to Azure.
 
-1. On the Azure Home page, select **Resource groups** and then select **Ignite24**.
+1. On the Azure Home page, select **Resource groups** and then select **Ignite24** or whatever resource group name you used.
 
 1. In the list of services, select the **Azure OpenAI** resource you created.
 
@@ -33,9 +33,9 @@ In this task, you’ll create a set of managed identities so that the various Az
 1. Enter the following commands at the Terminal window prompt. These commands allow the Azure Search and Azure OpenAI instances to access the Azure Blob Storage account.
 
     ```
-    $SEARCH_IDENTITY=$(az search service show --name $CONTOSO_SEARCH_SERVICE_NAME --resource-group Ignite24 --query identity.principalId -o tsv)
-    $AI_IDENTITY=$(az cognitiveservices account identity show --name $CONTOSO_AI_NAME --resource-group Ignite24 --query principalId -o tsv)
-    $STORAGE_SCOPE=$(az storage account show --name $CONTOSO_STORAGE_ACCOUNT_NAME --resource-group Ignite24 --query id -o tsv)
+    $SEARCH_IDENTITY=$(az search service show --name $CONTOSO_SEARCH_SERVICE_NAME --resource-group $RGNAME --query identity.principalId -o tsv)
+    $AI_IDENTITY=$(az cognitiveservices account identity show --name $CONTOSO_AI_NAME --resource-group $RGNAME --query principalId -o tsv)
+    $STORAGE_SCOPE=$(az storage account show --name $CONTOSO_STORAGE_ACCOUNT_NAME --resource-group $RGNAME --query id -o tsv)
     az role assignment create --role "Storage Blob Data Contributor" --assignee $SEARCH_IDENTITY --scope $STORAGE_SCOPE
     az role assignment create --role "Storage Blob Data Contributor" --assignee $AI_IDENTITY --scope $STORAGE_SCOPE
     ```
@@ -43,14 +43,14 @@ In this task, you’ll create a set of managed identities so that the various Az
 1. Enter the following commands at the Terminal window prompt. These commands allow the Azure Search to access the Azure OpenAI Service instance you created.
 
     ```
-    $AI_SCOPE=$(az cognitiveservices account show --name $CONTOSO_AI_NAME --resource-group Ignite24 --query id -o tsv)
+    $AI_SCOPE=$(az cognitiveservices account show --name $CONTOSO_AI_NAME --resource-group $RGNAME --query id -o tsv)
     az role assignment create --role "Cognitive Services OpenAI Contributor" --assignee $SEARCH_IDENTITY --scope $AI_SCOPE
     ```
 
 1. Enter the following commands at the Terminal window prompt. These commands allow the Azure OpenAI Service instance to access the Azure Search Service instance you created.
 
     ```
-    $SEARCH_SCOPE=$(az search service show --name $CONTOSO_SEARCH_SERVICE_NAME --resource-group Ignite24 --query id -o tsv)
+    $SEARCH_SCOPE=$(az search service show --name $CONTOSO_SEARCH_SERVICE_NAME --resource-group $RGNAME --query id -o tsv)
     az role assignment create --role "Search Index Data Contributor" --assignee $AI_IDENTITY --scope $SEARCH_SCOPE
     az role assignment create --role "Search Index Data Reader" --assignee $AI_IDENTITY --scope $SEARCH_SCOPE
     az role assignment create --role "Search Service Contributor" --assignee $AI_IDENTITY --scope $SEARCH_SCOPE
