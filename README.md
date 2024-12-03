@@ -19,4 +19,4 @@ az group create -n $RGNAME -l $LOCATION
 az deployment group create --resource-group $RGNAME --template-file azuredeploy.bicep --parameters @azuredeploy.parameters.json
 ```
 
-To begin the worksho,p head over to the [exercises](./exercises/ex-1) folder and start with [1-clone-repo.md](https://github.com/mosabami/modernize-app-ai-ready/blob/main/exercises/ex-1/1-clone-repo.md).
+To begin the workshop head over to the [exercises](./exercises/ex-1) folder and start with [1-clone-repo.md](https://github.com/mosabami/modernize-app-ai-ready/blob/main/exercises/ex-1/1-clone-repo.md).
