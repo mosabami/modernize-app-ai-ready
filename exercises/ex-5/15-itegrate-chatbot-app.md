@@ -17,7 +17,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     $ACR_NAME="contosoacr745457"
     ```
 
-     > ðŸ““ If you no longer have it noted down, you can find it again from the **Ignite24** Resource Group.
+     > ðŸ““ If you no longer have it noted down, you can find it again from the **Ignite24** Resource Group or whatever you named your repo.
 
     ![ydqt4iqz.jpg](../../media/ydqt4iqz.jpg)
 
@@ -65,7 +65,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 1. Enter the following to set the variables for values we've used previously.
 
     ```
-    $RG_NAME = "Ignite24"
+    $RGNAME = "Ignite24" # or whatever you named your resource group
     $CONTOSO_ACR_CREDENTIAL = az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv
 
     $PGUSER = "contosoadmin"
@@ -101,7 +101,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
 1. Enter the following into Visual Studio Code terminal window to pull and set the **$CONTOSO_BACKEND_URL** variable for use in the next step.
 
     ```
-    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "$RGNAME" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_BACKEND_URL"
     ```
@@ -114,7 +114,7 @@ In this task youâ€™ll prepare the flow for deployment and deploy the flow. Youâ€
     ```
 1. Get the URL of your frontend service
     ```    
-    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "$RGNAME" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     
     Write-Host -ForegroundColor Green  "Promptflow URL is: $CONTOSO_FRONTEND_URL"
     ```
