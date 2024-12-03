@@ -197,7 +197,7 @@ In this task, you’ll import a pre-built flow, configure flow settings, and the
 
     1. Select **Value** of **search_connection** and then select your **Azure AI Search Service** from the dropdown list.
     1. Select **Value** of **ai_connection** and then select your **Azure OpenAI** resource from the dropdown list.
-    1. Change the **Value** of **search_index** to **brochures** or whatever name was used for your search index.
+    1. Change the **Value** of **search_index** to **brochures-vector** or whatever name was used for your search index.
 
     ![j3kwbgik.jpg](../../media/j3kwbgik.jpg)
 

@@ -35,7 +35,7 @@ In this task you’ll test the chatbot locally before you publish the chatbot.
     AZURE_OPENAI_API_KEY="08c96b97791e44ea83c4dff67a76eb32" <- needs update
     AZURE_OPENAI_DEPLOYMENT_ID="gpt-4o"
     AZURE_AI_SEARCH_ENDPOINT="https://contososrch799498.search.windows.net" <- needs update
-    AZURE_AI_SEARCH_INDEX="brochures" <- make sure this is "brochures"
+    AZURE_AI_SEARCH_INDEX="brochures" <- make sure this is "brochures-vector"
     AZURE_AI_SEARCH_API_KEY="ctkSfXrdBMgyYEIFOkECVmrWrdcRioV7wyAfqRVSNGAzSeAsUWls" <- needs update
     PGHOST="mg32xpzwcffkg.postgres.database.azure.com" <- needs update
     PGPORT="5432"
