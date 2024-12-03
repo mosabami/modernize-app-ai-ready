@@ -24,6 +24,7 @@ In this task you’ll build a Docker container for the updated app front-end com
 
     ```
     $ACR_NAME="ACR_NAME_FROM_AZURE_PORTAL"
+    $RGNAME= "<your actual resource group name eg Ignite24>"
     ```
 
 1. Update the value for the $PATH_TO_UPDATED_APP variable to point to the **Downloads\ContosoHotel\UpdatedApp** folder on your machine. Enter the following commands at the Terminal window prompt. These commands switch the context to the folder that contains the updated app components.
@@ -124,8 +125,8 @@ In this task you’ll build a Docker container for the updated app front-end com
 1. Enter the following command at the Visual Studio Code Terminal window prompt and then select **Enter**. These commands create the container app for the back-end app components.
 
     ```powershell
-    az containerapp create --name "backend" --resource-group "Ignite24" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-backend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "POSTGRES_CONNECTION_STRING=$env:connectionString"
-    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    az containerapp create --name "backend" --resource-group "$RGNAME" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-backend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "POSTGRES_CONNECTION_STRING=$env:connectionString"
+    $CONTOSO_BACKEND_URL = "https://$(az containerapp show --name "backend" --resource-group "$RGNAME" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     Write-Host -ForegroundColor Green  "Backend URL is: $CONTOSO_BACKEND_URL"
     ```
 
@@ -136,8 +137,8 @@ In this task you’ll build a Docker container for the updated app front-end com
 1. Enter the following commands at the Terminal window prompt. These commands create the container app for the front-end app components.
 
     ```powershell
-    az containerapp create --name "frontend" --resource-group "Ignite24" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-frontend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "API_BASEURL=$CONTOSO_BACKEND_URL"
-    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "Ignite24" --query 'properties.configuration.ingress.fqdn' -o tsv)"
+    az containerapp create --name "frontend" --resource-group "$RGNAME" --environment "$CONTOSO_HOTEL_ENV" --image "$ACR_NAME.azurecr.io/pycontosohotel-frontend:v1.0.0" --target-port 8000 --ingress external --transport http --registry-server "$ACR_NAME.azurecr.io" --registry-username "$ACR_NAME" --registry-password "$CONTOSO_ACR_CREDENTIAL" --env-vars "API_BASEURL=$CONTOSO_BACKEND_URL"
+    $CONTOSO_FRONTEND_URL = "https://$(az containerapp show --name "frontend" --resource-group "$RGNAME" --query 'properties.configuration.ingress.fqdn' -o tsv)"
     Write-Host -ForegroundColor Green  "Frontend URL is: $CONTOSO_FRONTEND_URL"
     ```
 
